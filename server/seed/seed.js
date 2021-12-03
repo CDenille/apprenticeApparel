@@ -7,7 +7,7 @@ const {Cart} = require('../model/Cart')
 const {Category} = require('../model/Category')
 const {Item} = require('../model/Item')
 const {User} = require('../model/User')
-require('../seed/index')
+require('../model')
 
 const seed = async() => {
     await db.sync({force: true})
