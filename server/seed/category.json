@@ -1,0 +1,8 @@
+{
+    "category":[
+        {"womenClothing": "Women's Clothing"},
+        {"menClothing": "Men's Clothing"},
+        {"electronics": "Electronics"},
+        {"jewelery": "Jewelery"}
+    ]
+}
