@@ -19,7 +19,7 @@ User.init({
         }
     }
 },{
-    sequelize,
+    sequelize: db,
     timestamps: false,
 })
 
