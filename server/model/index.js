@@ -12,10 +12,11 @@ Item.belongsTo(Cart, {foreignKey: 'cartId'})
 Category.hasMany(Item, {as: 'items', foreignKey: 'categoryId'})
 Item.belongsTo(Category, {foreignKey: 'categoryId'})
 
-User.hasOne(Cart, {as: 'cart', foreignKey: 'userId'})
+User.hasOne(Cart, {foreignKey: 'userId'})
 Cart.belongsTo(User, {foreignKey: 'userId'})
 
 // User.hasMany(Item, {as: 'items', foreignKey: 'userId'})
+
 
 
 
