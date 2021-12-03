@@ -1,0 +1,14 @@
+{
+    "users": [
+        {"name": "Natalie Morales", "email": "nmorales@gmail.com"},
+        {"name": "Bruce Willis", "email": "brucewillis@aol.com"},
+        {"name": "Hiroyuki Sanada", "email": "hiroyuki5@yahoo.com"},
+        {"name": "Michelle Rodriguez", "email": "mrodriguez@gmail.com"},
+        {"name": "Morgan Freeman", "email": "morganfreeman@aol.com"},
+        {"name": "Ben Affleck", "email": "benaffleck@gmail.com"},
+        {"name": "Johnny Knoxville", "email": "johnknoxville@hotmail.com"},
+        {"name": "Salma Hayek", "email": "salmahayek@hotmail.com"},
+        {"name": "Idris Elba", "email": "idriselba15@gmail.com"},
+        {"name": "Tyler Perry", "email": "tylerperry@gmail.com"}
+    ]
+}
