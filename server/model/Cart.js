@@ -5,14 +5,14 @@ const { Item } = require('./Item');
 class Cart extends Model {}
 
 Cart.init({
-    UserId: {
+    userId: {
         type: DataTypes.INTEGER,
         references: {
             model: User,
             key: 'id'
         }
     },
-    ItemId: {
+    itemId: {
         type: DataTypes.INTEGER,
         references: {
             model: Item,
