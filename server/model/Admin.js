@@ -4,13 +4,6 @@ const { User } = require('./User');
 class Admin extends Model {}
 
 Admin.init({
-    UserId: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: User,
-            key: 'id'
-        }
-    },
     name: DataTypes.STRING,
     email: DataTypes.STRING
 },

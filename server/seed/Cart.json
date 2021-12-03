@@ -1,0 +1,8 @@
+{
+    "cart": [
+        { "CartId": "1", "UserId": 1, "itemId": 1},
+        { "CartId": "1", "UserId": 1, "itemId": 2},
+        { "CartId": "2", "UserId": 2, "itemId": 3},
+        { "CartId": "2", "UserId": 2, "itemId": 4}
+    ]
+}
