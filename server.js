@@ -17,6 +17,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+
+//this route returns HTML for all the jewelries
+app.get('/aa', async (req, res) => {
+    const items = await Items.findAll()
+    res.json(" Apprentice Apparel")
+    // res.render('items/ca', { items })
+})
+
+
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);
 });
