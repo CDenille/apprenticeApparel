@@ -1,7 +1,7 @@
 const {db, DataTypes, Model} = require('../db')
 
 class Item extends Model {
-    
+
 }
 
 Item.init({
@@ -10,7 +10,8 @@ Item.init({
     price: DataTypes.DOUBLE, 
     image: DataTypes.STRING
 }, {
-    sequelize: db
+    sequelize: db,
+    timestamps: false
 })
 
 module.exports = {Item}
