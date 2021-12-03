@@ -16,7 +16,8 @@ Admin.init({
     email: DataTypes.STRING
 },
 {
-    sequelize: db 
+    sequelize: db,
+    timestamps: false, 
 })
 
 module.exports = { Admin };

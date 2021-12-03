@@ -22,7 +22,8 @@ Cart.init({
     Total: DataTypes.INTEGER
 },
 {
-    sequelize: db 
+    sequelize: db,
+    timestamps: false,
 })
 
 module.exports = { Cart };
