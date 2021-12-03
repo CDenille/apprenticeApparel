@@ -34,7 +34,7 @@ const seed = async() => {
     const cartPromises = cart.map(cart=> Cart.create(cartPath))
     const categoryPromises = category.map(category=> Category.create(category))
     const itemPromises = items.map(item => Item.create(item))
-    const userPromises = users.map(user => user.create(user))
+    const userPromises = users.map(user => User.create(user)) 
 
     await Promise.all(adminPromises)
     await Promise.all(cartPromises)
