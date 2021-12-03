@@ -7,7 +7,8 @@ const config = require('./webpack.config.js');
 const compiler = webpack(config);
 const PORT = 3000;
 
-// const { Admin, Cart, Category, Item, User } = require("./server/model")
+const {sequelize} = require('./server/model');
+const { Admin, Cart, Category, Item, User } = require("./server/model")
 
 app.use(
     webpackDevMiddleware(compiler, {
@@ -22,10 +23,10 @@ app.use(express.static('public'));
 
 //this route returns HTML for all the jewelries
 app.get('/aa', async (req, res) => {
-    // const items = await Item.findAll()
-    console.log("Working")
-    res.send (" Apprentice Apparel")
-    // res.render('/aa', { items })
+    const items = await Item.findAll()
+    // console.log("Working")
+    // res.send (" Apprentice Apparel")
+    res.render('/aa', { items })
 })
 
 // app.get('/aa', (req, res) => {
