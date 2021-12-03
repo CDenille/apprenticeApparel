@@ -6,16 +6,16 @@ const {User} = require('./User')
 
 
 
-Cart.hasMany(Item, {as: 'items', foreignKey: 'cart_id'})
-Item.belongsTo(Cart, {foreignKey: 'cart_id'})
+Cart.hasMany(Item, {as: 'items', foreignKey: 'cartId'})
+Item.belongsTo(Cart, {foreignKey: 'cartId'})
 
-Category.hasMany(Item, {as: 'items', foreignKey: 'category_id'})
-Item.belongsTo(Category, {foreignKey: 'category_id'})
+Category.hasMany(Item, {as: 'items', foreignKey: 'categoryId'})
+Item.belongsTo(Category, {foreignKey: 'categoryId'})
 
-User.hasOne(Cart, {as: 'cart', foreignKey: 'user_id'})
-Cart.belongsTo(User, {foreignKey: 'user_id'})
+User.hasOne(Cart, {as: 'cart', foreignKey: 'userId'})
+Cart.belongsTo(User, {foreignKey: 'userId'})
 
-// User.hasMany(Item, {as: 'items', foreignKey: 'user_id'})
+// User.hasMany(Item, {as: 'items', foreignKey: 'userId'})
 
 
 
