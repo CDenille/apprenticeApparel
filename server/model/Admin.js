@@ -1,4 +1,3 @@
-const { STRING } = require('sequelize/dist');
 const { db, DataTypes, Model } = require('../db');
 const { User } = require('./User');
 
