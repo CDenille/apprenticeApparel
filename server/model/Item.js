@@ -9,10 +9,13 @@ Item.init({
     description: DataTypes.STRING,
     price: DataTypes.DOUBLE, 
     image: DataTypes.STRING,
-    sale: DataTypes.BOOLEAN
+    sale: DataTypes.INTEGER
+    
 }, {
     sequelize: db,
     timestamps: false
 })
 
 module.exports = {Item}
+
+//sale: DataTypes.BOOLEAN
