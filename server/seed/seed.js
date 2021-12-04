@@ -18,13 +18,13 @@ const seed = async() => {
     const itemPath = path.join(__dirname, 'item.json')
     const userPath = path.join(__dirname, 'user.json')
 
-    const adminBuffer = await fs.readFile(adminPath)
+     const adminBuffer = await fs.readFile(adminPath)
     const cartBuffer = await fs.readFile(cartPath)
     const categoryBuffer = await fs.readFile(categoryPath)
     const itemBuffer = await fs.readFile(itemPath)
     const userBuffer = await fs.readFile(userPath)
 
-    const {admin} = JSON.parse(String(adminBuffer))
+     const {admin} = JSON.parse(String(adminBuffer))
     const {cart} = JSON.parse(String(cartBuffer))
     const {category} = JSON.parse(String(categoryBuffer))
     const {items} = JSON.parse(String(itemBuffer))
@@ -36,7 +36,7 @@ const seed = async() => {
     const itemPromises = items.map(item => Item.create(item))
     const userPromises = users.map(user => User.create(user)) 
 
-    await Promise.all(adminPromises)
+     await Promise.all(adminPromises)
     await Promise.all(cartPromises)
     await Promise.all(categoryPromises)
     await Promise.all(itemPromises)
@@ -44,5 +44,5 @@ const seed = async() => {
    
     console.log('Data have been successfully added to our table')
 }
-
+seed()
 module.exports = seed;
