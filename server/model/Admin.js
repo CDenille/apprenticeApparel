@@ -1,5 +1,4 @@
 const { db, DataTypes, Model } = require('../db');
-const { User } = require('./User');
 
 class Admin extends Model {}
 

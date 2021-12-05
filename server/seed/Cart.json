@@ -1,9 +1,9 @@
 {
     "cart": [
-        {  "userId": 1, "itemId": 1},
-        {  "userId": 1, "itemId": 2},
-        {  "userId": 2, "itemId": 3},
-        {  "userId": 2, "itemId": 4}
+        {  "UserId": 1, "ItemId": 1},
+        {  "UserId": 1, "ItemId": 2},
+        {  "UserId": 2, "ItemId": 3},
+        {  "UserId": 2, "ItemId": 4}
     ]
 }
 

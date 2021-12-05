@@ -1,8 +1,6 @@
-const {db, DataTypes, Model} = require('../db')
+const { db, DataTypes, Model } = require('../db');
 
-class Item extends Model {
-
-}
+class Item extends Model {}
 
 Item.init({
     title: DataTypes.STRING,
@@ -16,6 +14,6 @@ Item.init({
     timestamps: false
 })
 
-module.exports = {Item}
+module.exports = { Item };
 
 //sale: DataTypes.BOOLEAN
