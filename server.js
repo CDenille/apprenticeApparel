@@ -10,10 +10,10 @@ const PORT = 3000;
 const {sequelize} = require('./server/model');
 const { Admin, Cart, Category, Item, User } = require("./server/model");
 const seed = require('./server/seed/seed.js');
-const {checkUser} = require('./src/middleware/loginMiddleware')
-const {isAdmin} = require('./src/middleware/adminMiddleware')
+const {checkUser} = require('./src/middlewares/loginMiddleware')
+const {isAdmin} = require('./src/middlewares/adminMiddleware')
 
-// seed();
+seed();
 
 app.use(
     webpackDevMiddleware(compiler, {

@@ -1,6 +1,3 @@
-const { db }  = require('/usr/local/google/home/denillec/multiverse_activites/Week 5/apprentice_apparel/server/db.js')
-//const {allUsers} = require('../../server/model/User')
-
 function checkUser (User, allUsers) {
     for(let i=0; i<allUsers.length; i++) {
         if(User.email == allUsers[i].dataValues.email) {

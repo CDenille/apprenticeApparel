@@ -1,5 +1,4 @@
-const { ModuleFilenameHelpers } = require('webpack')
-const { db }  = require('/usr/local/google/home/denillec/multiverse_activites/Week 5/apprentice_apparel/server/db.js')
+const { db }  = require('../../server/model')
 //const {allUsers} = require('../../server/model/User')
 
 function isAdmin(User) {
