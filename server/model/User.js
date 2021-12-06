@@ -19,7 +19,15 @@ User.init({
         validate: {
             notEmpty: true
         }
-    }
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
+    },
+    admin: DataTypes.INTEGER
 },{
     sequelize: db,
     timestamps: false,
