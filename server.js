@@ -11,7 +11,7 @@ const {sequelize} = require('./server/model');
 const { Admin, Cart, Category, Item, User } = require("./server/model");
 const seed = require('./server/seed/seed.js');
 
-seed();
+// seed();
 
 app.use(
     webpackDevMiddleware(compiler, {
