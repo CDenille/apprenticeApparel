@@ -1,6 +1,8 @@
 import React from 'react';
 import "./App.css";
+import "./Navigation.css"
 import { Routes, Route, Link } from 'react-router-dom';
+import Navigation from './components/Navigation';
 
 
 const Red = () => {
@@ -18,6 +20,7 @@ const Blue = () => {
 const App = () => {
     return (
         <div>
+            <Navigation />
             <div>
                 <div>
                     <h1>Hi there!!!!</h1>
