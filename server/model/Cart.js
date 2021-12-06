@@ -6,22 +6,22 @@ class Cart extends Model {}
 
 Cart.init({
 
-    userId: DataTypes.INTEGER,
-    itemId: DataTypes.INTEGER
-    // userId: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: User,
-    //         key: 'id'
-    //     }
-    // },
-    // itemId: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: Item,
-    //         key: 'id'
-    //     }
-    // },
+    // UserId: DataTypes.INTEGER,
+    // ItemId: DataTypes.INTEGER
+    UserId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: User,
+            key: 'id'
+        }
+    },
+    ItemId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: Item,
+            key: 'id'
+        }
+    },
     // Total: DataTypes.INTEGER
 },
 {
