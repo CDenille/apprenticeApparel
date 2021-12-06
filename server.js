@@ -25,16 +25,16 @@ app.use(express.static('public'));
 
 
 //this route returns HTML for all the jewelries
-// app.get('/aa', async (req, res) => {
-//     const items = await Item.findAll()
-//     // console.log("Working")
-//     // res.send (" Apprentice Apparel")
-//     res.render('/aa', { items })
-// })
-
-app.get('/aa', (req, res) => {
-    res.send('hi there')
+app.get('/aa', async (req, res) => {
+    const items = await Item.findAll()
+    // console.log("Working")
+    // res.send (" Apprentice Apparel")
+    res.render('/aa', { items })
 })
+
+// app.get('/aa', (req, res) => {
+//     res.send('hi there')
+// })
 
 
 app.listen(PORT, function() {
