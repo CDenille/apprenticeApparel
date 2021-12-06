@@ -1,0 +1,11 @@
+.button {
+    background-color: black;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+.button:focus {
+    background-color: #666;
+}
