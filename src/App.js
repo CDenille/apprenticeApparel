@@ -1,7 +1,9 @@
 import React from 'react';
 import "./App.css";
+import "./Footer.css"
 import { Routes, Route, Link } from 'react-router-dom';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const Red = () => {
     return (
@@ -37,6 +39,7 @@ const App = () => {
                     </Routes>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
