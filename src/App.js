@@ -1,6 +1,8 @@
 import React from 'react';
 import "./App.css";
+import "./Footer.css"
 import { Routes, Route, Link } from 'react-router-dom';
+import Footer from './components/Footer';
 
 
 const Red = () => {
@@ -35,6 +37,7 @@ const App = () => {
                     </Routes>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
