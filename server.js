@@ -55,6 +55,7 @@ app.get('/aa/womens', async(req,res) => {
     })
     res.json({womens})
 })
+
 //route displays all mens clothing
 app.get('/aa/mens', async(req,res) => {
     let mens = await Item.findAll({
@@ -64,6 +65,7 @@ app.get('/aa/mens', async(req,res) => {
     })
     res.json({mens})
 })
+
 //route displays all jewelry
 app.get('/aa/jewelry', async(req,res) => {
     let jewelry = await Item.findAll({
@@ -127,7 +129,59 @@ app.get('/aa/login', async(req,res) => {
     //console.log('You do not have an account. Please sign up.')
     }   
 })
-//route for admin page
+
+// route for admin page
+// The application should support an admin to add new items for sale, 
+// change descriptions or removed items from sale
+app.get('/aa/adminView', async(req,res) => {
+    let allItems= await Item.findAll()
+    res.json({allItems})
+})
+
+app.put('/aa/adminView/:id', async(req,res) => {
+    let itemId = req.params.id
+    let item = await Item.findByPk(itemId)
+    let updatedItem = await item.update(req.body)
+    res.json(updatedItem)
+})
+
+
+// contacts route for the contacts and about information
+app.post('/aa/contactus', async(req,res) => {
+    let contactForm = await req.body
+    console.log({contactForm})
+    // res.send("Here is your information", contactForm)
+    res.redirect("/aa")
+})
+
+// checkout route to pay or delete items in the cart.
+app.get('/aa/checkout/:id', async(req,res) => {
+    let id = req.params.id
+    let cart = await Cart.findAll({
+        where: {
+            userId: id
+        }
+    })
+    let items = []
+    for (let i = 0; i < cart.length; i++) {
+        let item = await Item.findAll({
+            where: {
+                id: cart[i].ItemId
+            }
+        })
+        items.push(item)
+    }
+    res.json({items})
+})
+// sale route to display all the items that are on sale 
+app.get('/aa/sale', async(req,res) => {
+    let saleItems = await Item.findAll({
+        where: {
+            sale: 1
+        }
+    })
+    res.json({saleItems})
+})
 
 //route to display all users 
 app.get('/aa/users', async(req,res) => {

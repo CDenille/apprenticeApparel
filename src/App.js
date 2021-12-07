@@ -4,8 +4,10 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Navigation from './components/NavigationBar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './components/Home'
 
 import "./App.css";
+import "./Home.css"
 import "./Navigation.css"
 import "./Footer.css"
 
@@ -39,6 +41,7 @@ const App = () => {
 
                 <div>
                     <Routes>
+                        <Route path='/' exact element={<Home />}/>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
                         <Route path='/contactus' element={<Contact />} />
