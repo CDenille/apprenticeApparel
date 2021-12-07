@@ -36,7 +36,7 @@ const App = () => {
     return (
         <div>
             <Navigation />
-            <div>
+            {/* <div> */}
                 {/* <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
@@ -50,7 +50,7 @@ const App = () => {
                 
 
                     <p><Link to='/'>Go to Contact!</Link></p>
-                </div>
+                {/* </div> */}
 
 
                 <div>
@@ -61,7 +61,7 @@ const App = () => {
                         <Route path='/' element={<Contact />} />
                     </Routes>
                 </div>
-            </div>
+            {/* // </div> */}
             <Footer />
         </div>
     )
