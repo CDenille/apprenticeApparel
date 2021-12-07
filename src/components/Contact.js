@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
+import axios from 'axios';
 import Logo from '../../Logo.png'
 import './Contact.css';
 
 const Contact = () => {
 
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+
     const github = (name) => {
         const url = `https://github.com/${name}`;
         window.open(url, '_blank');
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message
+        }
+        console.log('myForm: ', form)
+        axios.post('/aa/contactus', {
+            contactForm: form
+        })
     }
 
     return (
@@ -69,30 +89,31 @@ const Contact = () => {
                 </Row>
                 <Row>
                 <Col>
-                <Form>
+                <Form  onClick={handleSubmit}>
                     <FloatingLabel
                         controlId="floatingInput"
                         label="Full name"
                         className="mb-3">
-                        <Form.Control type="name" placeholder="James Bond" />
+                        <Form.Control type="name" placeholder="James Bond" onChange={e=>setName(e.target.value)}/>
                     </FloatingLabel>
                     <FloatingLabel
                         controlId="floatingInput"
                         label="Email address"
                         className="mb-3">
-                        <Form.Control type="email" placeholder="name@example.com" />
+                        <Form.Control type="email" placeholder="name@example.com" onChange={e=>setEmail(e.target.value)}/>
                     </FloatingLabel>
                     <FloatingLabel
                         controlId="floatingInput"
                         label="Phone number"
                         className="mb-3">
-                        <Form.Control type="phone number" placeholder="555-555-5555" />
+                        <Form.Control type="phone number" placeholder="555-555-5555" onChange={e=>setPhone(e.target.value)}/>
                     </FloatingLabel>
                     <FloatingLabel controlId="floatingTextarea2" label="Message" className="mb-3">
                         <Form.Control
                             as="textarea"
                             placeholder="Leave a comment here"
-                            style={{ height: '100px' }}/>
+                            style={{ height: '100px' }}
+                            onChange={e=>setMessage(e.target.value)}/>
                     </FloatingLabel>
                     <Button className="button" type="submit">
                         Submit

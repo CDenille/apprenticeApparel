@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import Navigation from './components/Navigation';
+import Navigation from './components/NavigationBar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -34,14 +34,14 @@ const App = () => {
                     <p>Denille is here</p>
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
-                    <p><Link to='/'>Go to Contact!</Link></p>
+                    <p><Link to='/contactus'>Go to Contact!</Link></p>
                 </div>
 
                 <div>
                     <Routes>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
-                        <Route path='/' element={<Contact />} />
+                        <Route path='/contactus' element={<Contact />} />
                     </Routes>
                 </div>
             </div>
