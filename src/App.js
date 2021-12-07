@@ -1,6 +1,13 @@
 import React from 'react';
 import "./App.css";
+
+import "./Navigation.css"
+import Navigation from './components/Navigation';
+
+import "./Footer.css"
 import { Routes, Route, Link } from 'react-router-dom';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 const Red = () => {
@@ -18,6 +25,7 @@ const Blue = () => {
 const App = () => {
     return (
         <div>
+            <Navigation />
             <div>
                 <div>
                     <h1>Hi there!!!!</h1>
@@ -26,15 +34,18 @@ const App = () => {
                     <p>Denille is here</p>
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
+                    <p><Link to='/contacts'>Go to Contact!</Link></p>
                 </div>
 
                 <div>
                     <Routes>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
+                        <Route path='/contacts' element={<Contact />} />
                     </Routes>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
