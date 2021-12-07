@@ -1,5 +1,20 @@
+.contact-wrapper {
+    background-color: #131e30;
+}
+
+.contact-header {
+    color: #d2a561;
+    text-align: center;
+    margin-top: 15px;
+}
+
+div.card {
+    margin-bottom: 15px;
+}
+
 .button {
     background-color: black;
+    width: 100%;
 }
 
 .button:hover {
