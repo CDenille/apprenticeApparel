@@ -2,7 +2,7 @@ import React from 'react';
 import "./App.css";
 
 import "./Navigation.css"
-import Navigation from './components/Navigation';
+import Navigation from './components/NavigationBar';
 
 import "./Footer.css"
 import { Routes, Route, Link } from 'react-router-dom';
