@@ -1,9 +1,19 @@
 import React from 'react';
+
+
+
+
+import "./Home.css"
+import Navigation from './components/NavigationBar';
+
+
+
 import { Routes, Route, Link } from 'react-router-dom';
 
-import Navigation from './components/Navigation';
+
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './components/Home'
 
 import "./App.css";
 import "./Navigation.css"
@@ -27,18 +37,25 @@ const App = () => {
         <div>
             <Navigation />
             <div>
-                <div>
+                {/* <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
                     <p>Denille is here</p>
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
+
+                    <p><Link to='/contacts'>Go to Contact!</Link></p>
+                </div> */}
+                
+
                     <p><Link to='/'>Go to Contact!</Link></p>
                 </div>
 
+
                 <div>
                     <Routes>
+                        <Route path='/' exact element={<Home />}/>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
                         <Route path='/' element={<Contact />} />
