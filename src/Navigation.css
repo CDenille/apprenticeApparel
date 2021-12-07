@@ -12,11 +12,10 @@ nav{
 
 }
 
-.logo{
+.logo img{
     position: absolute;
-    height: 60px;
-    width: 60px;
-    color: #d2a561;
+    height: 65px;
+    width: 65px;
     margin-left: 20px;
     background-image: url('https://raw.githubusercontent.com/cesarsnina/apprentice_apparel/main/Screenshot%202021-12-04%2010.39.28%20AM.png?token=ANSATKRXGK6KYUP3MRSIKVTBVZY2Y');
     background-size: cover;
@@ -27,6 +26,7 @@ nav{
     list-style: none;
     text-align: center;
     margin-left: 200px;
+    margin-top: 8px;
     
 }
 

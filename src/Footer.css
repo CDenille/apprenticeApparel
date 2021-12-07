@@ -6,6 +6,7 @@ footer {
     flex-direction: row;
     background-color: #131e30;
     width: 100%;
+    border-top: 3px solid #56585c;
     
 }
 
