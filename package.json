@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "serve": "webpack serve --mode development",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "seed": "node ./server/seed/seed.js"
   },
   "repository": {
     "type": "git",
