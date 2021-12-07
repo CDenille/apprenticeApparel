@@ -5,6 +5,7 @@ import Navigation from './components/NavigationBar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home'
+import Sale from './components/Sale'
 
 import "./App.css";
 import "./Home.css"
@@ -44,6 +45,8 @@ const App = () => {
                         <Route path='/' exact element={<Home />}/>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
+                        <Route path='/' element={<Contact />} />
+                        <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/contactus' element={<Contact />} />
                     </Routes>
                 </div>
