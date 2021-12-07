@@ -14,6 +14,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home'
+import Sale from './components/Sale'
 
 import "./App.css";
 import "./Navigation.css"
@@ -59,6 +60,7 @@ const App = () => {
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
                         <Route path='/' element={<Contact />} />
+                        <Route path='/aa/sale' element={<Sale />} />
                     </Routes>
                 </div>
             {/* // </div> */}
