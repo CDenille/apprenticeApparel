@@ -1,22 +1,14 @@
 import React from 'react';
-
-
-
-
-import "./Home.css"
-import Navigation from './components/NavigationBar';
-
-
-
 import { Routes, Route, Link } from 'react-router-dom';
 
-
+import Navigation from './components/NavigationBar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home'
 import Sale from './components/Sale'
 
 import "./App.css";
+import "./Home.css"
 import "./Navigation.css"
 import "./Footer.css"
 
@@ -37,22 +29,16 @@ const App = () => {
     return (
         <div>
             <Navigation />
-            {/* <div> */}
-                {/* <div>
+            <div>
+                <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
                     <p>Denille is here</p>
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
-
-                    <p><Link to='/contacts'>Go to Contact!</Link></p>
-                </div> */}
-                
-
-                    <p><Link to='/'>Go to Contact!</Link></p>
-                {/* </div> */}
-
+                    <p><Link to='/contactus'>Go to Contact!</Link></p>
+                </div>
 
                 <div>
                     <Routes>
@@ -61,9 +47,10 @@ const App = () => {
                         <Route path='/blue' element={<Blue />} />
                         <Route path='/' element={<Contact />} />
                         <Route path='/aa/sale' element={<Sale />} />
+                        <Route path='/contactus' element={<Contact />} />
                     </Routes>
                 </div>
-            {/* // </div> */}
+            </div>
             <Footer />
         </div>
     )
