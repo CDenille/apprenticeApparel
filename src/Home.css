@@ -1,0 +1,23 @@
+.categories-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 400px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    overflow: auto;
+    height: auto;
+    width: 70%;
+    
+}
+
+.image-p-container img{
+    margin-right: 30px;
+    height: 400px;
+    width: 450px;
+    object-fit:fill;
+}
+
+.image-p-container p {
+    color: white;
+}
