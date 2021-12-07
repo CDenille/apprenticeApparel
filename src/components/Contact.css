@@ -1,3 +1,16 @@
+.contact-wrapper {
+    background-color: #131e30;
+}
+
+.contact-header {
+    color: #d2a561;
+    text-align: center;
+}
+
+div.card {
+    margin-top: 15px;
+}
+
 .button {
     background-color: black;
 }
