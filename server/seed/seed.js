@@ -47,5 +47,7 @@ const seed = async() => {
    
     console.log('Data have been successfully added to our table');
 }
-// seed()
+
+seed();
+
 module.exports = seed;

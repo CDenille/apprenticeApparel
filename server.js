@@ -13,7 +13,7 @@ const seed = require('./server/seed/seed.js');
 const {checkUser} = require('./src/middlewares/loginMiddleware')
 const {isAdmin} = require('./src/middlewares/adminMiddleware')
 
-seed();
+// seed();
 
 app.use(
     webpackDevMiddleware(compiler, {
