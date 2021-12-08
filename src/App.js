@@ -28,29 +28,23 @@ import "./components/Footer.css"
 const App = () => {
     return (
         <div>
-            <Navigation />
-            <div>
                 {/* <div>
-                    <h1>Hi there!!!!</h1>
-                    <p>How are you??</p>
-                    <p>This is a test!!</p>
-                    <p>Denille is here</p>
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
                     <p><Link to='/contactus'>Go to Contact!</Link></p>
                 </div> */}
 
                 <div>
+                    <Navigation />
                     <Routes>
                         <Route path='/' exact element={<Home />}/>
-                        {/* <Route path='/red' element={<Red />} />
-                        <Route path='/blue' element={<Blue />} /> */}
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/aa/contactus' element={<Contact />} />
+                        {/* <Route path='/red' element={<Red />} />
+                        <Route path='/blue' element={<Blue />} /> */}
                     </Routes>
+                    <Footer />
                 </div>
-            </div>
-            <Footer />
         </div>
     )
 }

@@ -174,9 +174,9 @@ app.get('/aa/users', async(req,res) => {
     res.json({users})
 })
 
-// app.use('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'puclic/index.html'))
-// })
+app.use('*', (req, res) => {
+    res.redirect('/aa');
+})
 
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);
