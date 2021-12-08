@@ -9,6 +9,8 @@ import Sale from './components/Sale'
 import Womens from './components/Womens'
 import Admin from './components/Admin'
 
+
+
 import "./App.css";
 import "./Home.css"
 import "./Navigation.css"
@@ -31,22 +33,16 @@ const App = () => {
     return (
         <div>
             <Navigation />
-            {/* <div> */}
-                {/* <div>
+            <div>
+                <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
                     <p>Denille is here</p>
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
-
-                    <p><Link to='/contacts'>Go to Contact!</Link></p>
-                </div> */}
-                
-
-                    <p><Link to='/'>Go to Contact!</Link></p>
-                {/* </div> */}
-
+                    <p><Link to='/contactus'>Go to Contact!</Link></p>
+                </div>
 
                 <div>
                     <Routes>
@@ -58,9 +54,10 @@ const App = () => {
                         <Route path='/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
                         <Route path='/admin' element={<Admin />} />
+
                     </Routes>
                 </div>
-            {/* // </div> */}
+            </div>
             <Footer />
         </div>
     )

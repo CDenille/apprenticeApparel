@@ -25,6 +25,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+app.post('/aa/contactus', async(req,res) => {
+    let { contactForm } = await req.body
+    console.log(contactForm)
+    // res.send("Here is your information", contactForm)
+    res.redirect("/aa")
+})
 
 // //this route returns HTML for all the jewelries
 // app.get('/aa', async (req, res) => {
