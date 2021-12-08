@@ -11,7 +11,7 @@ const SideBar = () => {
                 </Link>
 
                 <Link to="/#">
-                  <li><a>women's Clothing</a></li>
+                  <li><a>Women's Clothing</a></li>
                 </Link>
 
                 <Link to="/#">

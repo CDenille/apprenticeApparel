@@ -4,7 +4,16 @@
 
 .side-bar-ul  a {
     text-decoration: none;
-    margin-bottom: 70px;
+    /* margin-bottom: 100px; */
+    color: #d2a561;
+    font-size: 35px;
+    padding: 10px;
+   
+}
+
+.side-bar-ul  li {
+    text-decoration: none;
+    margin-bottom: 100px;
     color: #d2a561;
     font-size: 25px;
     padding: 10px;
@@ -13,8 +22,9 @@
 
 .sidebar-container{
     background-color:#56585c;
-    width: 300px;
+    width: 390px;
     margin-left: 30px;
     margin-top: 90px;
+    margin-bottom: 90px;
 }
 
