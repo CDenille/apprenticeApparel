@@ -7,7 +7,7 @@ Item.init({
     description: DataTypes.STRING,
     price: DataTypes.DOUBLE, 
     image: DataTypes.STRING,
-    sale: DataTypes.INTEGER
+    sale: DataTypes.BOOLEAN
     
 }, {
     sequelize: db,
