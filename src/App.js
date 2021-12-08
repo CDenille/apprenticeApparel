@@ -15,6 +15,7 @@ import "./App.css";
 import "./Home.css"
 import "./Navigation.css"
 import "./Footer.css"
+import './SideBar.css'
 
 
 const Red = () => {
