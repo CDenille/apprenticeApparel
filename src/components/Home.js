@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import SideBar from './SideBar';
+
 
 class Home extends Component {
     constructor(props){
@@ -29,18 +31,23 @@ class Home extends Component {
     render() {
         console.log("state here", this.state.categories)
         return (
-           
-            <div className="categories-container">
+            <div className="parent-container">
+                <div><SideBar /></div>
+                <div className="categories-container">
                 
-                {this.state.categories.map(category => {
-                    return <div key = {category.id} className="image-p-container"> 
-                             <img src={category.image} />
-                             <p>{category.name}</p>
+                    {this.state.categories.map(category => {
+                        return <div key = {category.id} className="image-p-container"> 
+                                <img src={category.image} />
+                                <p>{category.name}</p>
 
-                          </div>
-                })}
+                            </div>
+                    })}
                 
+               </div>
+
             </div>
+           
+            
         );
     }
 }
