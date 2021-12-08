@@ -1,21 +1,16 @@
 import React from 'react';
-
-
-
-
-import "./Home.css"
-import Navigation from './components/NavigationBar';
-
-
-
 import { Routes, Route, Link } from 'react-router-dom';
 
-
+import Navigation from './components/NavigationBar';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Home from './components/Home'
+import Sale from './components/Sale'
+import Womens from './components/Womens'
+import Admin from './components/Admin'
 
 import "./App.css";
+import "./Home.css"
 import "./Navigation.css"
 import "./Footer.css"
 
@@ -55,10 +50,14 @@ const App = () => {
 
                 <div>
                     <Routes>
-                        <Route path='/' exact element={<Home />}/>
+                        <Route path='/home' exact element={<Home />}/>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
                         <Route path='/' element={<Contact />} />
+                        <Route path='/aa/sale' element={<Sale />} />
+                        <Route path='/contactus' element={<Contact />} />
+                        <Route path='/womens' element={<Womens />} />
+                        <Route path='/admin' element={<Admin />} />
                     </Routes>
                 </div>
             {/* // </div> */}
