@@ -8,29 +8,29 @@ import Home from './components/Home'
 import Sale from './components/Sale'
 
 import "./App.css";
-import "./Home.css"
-import "./Navigation.css"
-import "./Footer.css"
+import "./components/Home.css"
+import "./components/NavigationBar.css"
+import "./components/Footer.css"
 
 
-const Red = () => {
-    return (
-        <h1>RED!</h1>
-    )
-}
+// const Red = () => {
+//     return (
+//         <h1>RED!</h1>
+//     )
+// }
 
-const Blue = () => {
-    return (
-        <h1>BLUE!</h1>
-    )
-}
+// const Blue = () => {
+//     return (
+//         <h1>BLUE!</h1>
+//     )
+// }
 
 const App = () => {
     return (
         <div>
             <Navigation />
             <div>
-                <div>
+                {/* <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
@@ -38,16 +38,15 @@ const App = () => {
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
                     <p><Link to='/contactus'>Go to Contact!</Link></p>
-                </div>
+                </div> */}
 
                 <div>
                     <Routes>
                         <Route path='/' exact element={<Home />}/>
-                        <Route path='/red' element={<Red />} />
-                        <Route path='/blue' element={<Blue />} />
-                        <Route path='/' element={<Contact />} />
+                        {/* <Route path='/red' element={<Red />} />
+                        <Route path='/blue' element={<Blue />} /> */}
                         <Route path='/aa/sale' element={<Sale />} />
-                        <Route path='/contactus' element={<Contact />} />
+                        <Route path='/aa/contactus' element={<Contact />} />
                     </Routes>
                 </div>
             </div>
