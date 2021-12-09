@@ -90,14 +90,19 @@ app.get('/aa/electronics', async(req,res) => {
 app.post('/aa/signup', async(req,res) => {
     let allUsers =  await User.findAll()
     let user= req.body
-    let validUser = await checkUser(user, allUsers)
-    if(!validUser) {
+    let validUser = checkUser(user, allUsers)
+    if(!validUser ) {
         let newUser = await User.create(req.body)
-        res.send('New user created')
+        res.send({"newUser": newUser})
     }else {
-        console.log('You already have an account. Please login.')
-        res.redirect('/aa/login')
-    }
+        let existUser = await User.findAll({
+            where: {
+                email: user.email
+            }
+        })
+        console.log(existUser)
+        res.send({"existUser": existUser})
+    } 
 })
 //route checks if user is valid then checks if user is an admin
 // if user is an admin, redirect to admin page
