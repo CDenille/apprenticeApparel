@@ -41,7 +41,7 @@ const App = () => {
         <div>
             <Navigation />
             <div className ="app-ontainer">
-                {/* <div>
+                <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
@@ -49,7 +49,7 @@ const App = () => {
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
                     <p><Link to='/contactus'>Go to Contact!</Link></p>
-                </div> */}
+                </div>
                 <div className="side-bar-container">
                   <SideBar />
                 </div>
