@@ -174,9 +174,9 @@ app.get('/aa/users', async(req,res) => {
     res.json({users})
 })
 
-app.use('*', (req, res) => {
-    res.redirect('/aa');
-})
+// app.use('*', (req, res) => {
+//     res.redirect('/');
+// })
 
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);
