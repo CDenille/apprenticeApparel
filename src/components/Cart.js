@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Table, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './Cart.css';
@@ -6,6 +7,7 @@ import './Cart.css';
 
 const Cart = () => {
     const [cart, setCart] = useState([]);
+    const { id } = useParams();
 
     useEffect(() => {
         fetchCart();
@@ -41,21 +43,23 @@ const Cart = () => {
             <Table responsive="sm">
                 <thead>
                 <tr>
+                    <th></th>
                     <th>#</th>
                     <th>Image</th>
                     <th>Product Name</th>
                     <th>Description</th>
-                    <th >Price</th>
+                    <th>Price</th>
                 </tr>
                 </thead>
 
                 <tbody>
                     {
-                        cart.map((ele) => {
+                        cart.map((ele, index) => {
                             const item = ele[0];
                             return (
                                 <tr key={item.id}>
-                                    <td>{item.id}</td>
+                                    <td><Button className='delete'>Delete</Button></td>
+                                    <td>{index}</td>
                                     <td><img src={item.image}/></td>
                                     <td>{item.title}</td>
                                     <td>{item.description}</td>

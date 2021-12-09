@@ -12,22 +12,26 @@
     display: block;
 }
 
-.empty-cart:hover, .place-order:hover {
+.delete {
+    background-color: black;
+}
+
+.place-order, .delete {
+    display: block;
+    margin: auto;
+}
+
+.empty-cart:hover, .place-order:hover, .delete:hover {
     background-color: #333;
 }
 
-.empty-cart:focus, .place-order:focus {
+.empty-cart:focus, .place-order:focus, .delete:focus {
     background-color: #666;
 }
 
 .empty-cart, .place-order {
     background-color: black;
     width: 20%
-}
-
-.place-order {
-    display: block;
-    margin: auto;
 }
 
 th, td, h4 {
