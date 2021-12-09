@@ -1,5 +1,6 @@
 const express = require('express');
 const webpack = require('webpack');
+const path = require('path');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
@@ -24,21 +25,6 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-
-app.post('/aa/contactus', async(req,res) => {
-    let { contactForm } = await req.body
-    console.log(contactForm)
-    // res.send("Here is your information", contactForm)
-    res.redirect("/aa")
-})
-
-// //this route returns HTML for all the jewelries
-// app.get('/aa', async (req, res) => {
-//     const items = await Item.findAll()
-//     // console.log("Working")
-//     // res.send (" Apprentice Apparel")
-//     res.render('/aa', { items })
-// })
 
 //route displays homepage and store categories
 app.get('/aa', async(req, res) => {
@@ -148,10 +134,9 @@ app.get('/aa/adminView/:id', async(req,res) => {
 
 // contacts route for the contacts and about information
 app.post('/aa/contactus', async(req,res) => {
-    let contactForm = await req.body
-    console.log({contactForm})
-    // res.send("Here is your information", contactForm)
-    res.redirect("/aa")
+    let { contactForm } = await req.body
+    console.log(contactForm)
+    res.send("Here is your information", contactForm)
 })
 
 // checkout route to pay or delete items in the cart.
@@ -189,6 +174,12 @@ app.get('/aa/users', async(req,res) => {
     res.json({users})
 })
 
+// app.use('*', (req, res) => {
+//     res.redirect('/');
+// })
+
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);
 });
+
+

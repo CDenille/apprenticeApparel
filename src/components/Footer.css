@@ -1,5 +1,5 @@
 footer {
-    position: fixed;
+    position: sticky;
     overflow: auto;
     bottom: 0;
     left: 0;
@@ -8,7 +8,7 @@ footer {
     background-color: #131e30;
     width: 100%;
     border-top: 3px solid #56585c;
-    
+    z-index: 100;
 }
 
 footer p {

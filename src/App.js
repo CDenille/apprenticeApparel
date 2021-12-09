@@ -2,33 +2,21 @@ import React, {useState} from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 import Navigation from './components/NavigationBar';
+import Home from './components/Home';
+import Sale from './components/Sale';
 import Contact from './components/Contact';
+import Cart from './components/Cart';
 import Footer from './components/Footer';
-import Home from './components/Home'
-import Sale from './components/Sale'
 import Womens from './components/Womens'
 import Admin from './components/Admin'
 import UpdateItem from './components/UpdateItem'
 
 
 import "./App.css";
-import "./Home.css"
-import "./Navigation.css"
-import "./Footer.css"
-import './SideBar.css'
-
-
-const Red = () => {
-    return (
-        <h1>RED!</h1>
-    )
-}
-
-const Blue = () => {
-    return (
-        <h1>BLUE!</h1>
-    )
-}
+import "./components/Home.css";
+import "./components/NavigationBar.css";
+import "./components/Footer.css";
+import './components/SideBar.css';
 
 const App = () => {
     const [item, setItem] = useState( )
@@ -37,7 +25,7 @@ const App = () => {
         setItem(i)
     }
     return (
-        <div>
+        <>
             <Navigation />
             <div>
                 <div>
@@ -61,12 +49,13 @@ const App = () => {
                         <Route path='/womens' element={<Womens />} />
                         <Route path='/' element={<Admin itemsFunction={items}/>} />
                         <Route path='/aa/adminView/:id' element={<UpdateItem item={item} />} />
+                        <Route path='aa/checkout/:id' element={<Cart />} />
 
                     </Routes>
                 </div>
             </div>
             <Footer />
-        </div>
+        </>
     )
 }
 
