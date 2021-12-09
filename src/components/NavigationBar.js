@@ -7,24 +7,24 @@ import Logo from '../../Logo.png'
 const Navigation = () => {
     return (
         <nav>
-            <Link to="Home">
+            <Link to="/">
                <div className="logo"><img src = {Logo} /></div>
             </Link>
 
             <ul className ="nav-ul">
-                <Link to="/Menu">
+                <Link to="/aa/menu">
                   <li>Menu</li>
                 </Link>
 
-                <Link to="/Sale">
+                <Link to="/aa/sale">
                   <li>Sale</li>
                 </Link>
 
-                <Link to="/Account">
+                <Link to="/aa/account">
                   <li>Account</li>
                 </Link>
 
-                <Link to="/Cart">
+                <Link to="/aa/checkout/2">
                   <li className="cart-style"><FaCartPlus /></li>
                 </Link>
             </ul>
