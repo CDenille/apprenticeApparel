@@ -12,19 +12,19 @@ const Navigation = () => {
             </Link>
 
             <ul className ="nav-ul">
-                <Link to="/Menu">
+                <Link to="/aa/menu">
                   <li>Menu</li>
                 </Link>
 
-                <Link to="/sale">
+                <Link to="/aa/sale">
                   <li>Sale</li>
                 </Link>
 
-                <Link to="/cccount">
+                <Link to="/aa/account">
                   <li>Account</li>
                 </Link>
 
-                <Link to="/cart">
+                <Link to="/aa/checkout/2">
                   <li className="cart-style"><FaCartPlus /></li>
                 </Link>
             </ul>

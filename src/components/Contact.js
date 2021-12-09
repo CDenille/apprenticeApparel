@@ -48,7 +48,7 @@ const Contact = () => {
                             <Card.Title>Serge Nikiema</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
                         </Card.Body>
-                        <Button className="button" onClick={()=>github('sergethi')}>GitHub</Button>
+                        <Button className="github" onClick={()=>github('sergethi')}>GitHub</Button>
                     </Card>
                 </Col>
                 <Col md="auto">
@@ -58,7 +58,7 @@ const Contact = () => {
                             <Card.Title>Mamadou Diallo</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
                         </Card.Body>
-                        <Button className="button" onClick={()=>github('saliouprogress')}>GitHub</Button>
+                        <Button className="github" onClick={()=>github('saliouprogress')}>GitHub</Button>
                     </Card>
                 </Col>
                 <Col md="auto">
@@ -68,7 +68,7 @@ const Contact = () => {
                             <Card.Title>Denille Carrington</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
                         </Card.Body>
-                        <Button className="button" onClick={()=>github('CDenille')}>GitHub</Button>
+                        <Button className="github" onClick={()=>github('CDenille')}>GitHub</Button>
                     </Card>
                 </Col>
                 <Col md="auto">
@@ -78,7 +78,7 @@ const Contact = () => {
                             <Card.Title>Cesar Nina</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
                         </Card.Body>
-                        <Button className="button" onClick={()=>github('cesarsnina')}>GitHub</Button>
+                        <Button className="github" onClick={()=>github('cesarsnina')}>GitHub</Button>
                     </Card>
                 </Col>
                 </Row>
@@ -115,7 +115,7 @@ const Contact = () => {
                             style={{ height: '100px' }}
                             onChange={e=>setMessage(e.target.value)}/>
                     </FloatingLabel>
-                    <Button className="button" type="submit">
+                    <Button className="contact-submit" type="submit">
                         Submit
                     </Button>
                 </Form>
