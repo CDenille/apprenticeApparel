@@ -31,13 +31,16 @@ const  Login = () =>  {
         if (response.newUser) {
             console.log("New User",response)
             navigate('/aa/signup')
-        } else if (response.wrongPassword) {
-            console.log("Wrong Password",response)
+        } 
+        if (!response.existUser.password) {
+            console.log("Incorrect Password",response)
             navigate('/aa/login')
-        } else{
+        } else if (response.existUser.admin) {
+            console.log("You have admin rights",response)
+            navigate('/aa/admin')
+        }
             console.log("Valid Login",response)
             navigate('/')
-        }
     }
     return (
         <Container className="contact-wrapper">

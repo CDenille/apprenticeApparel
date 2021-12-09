@@ -10,8 +10,8 @@
         {"name": "Salma Hayek", "email": "salmahayek@hotmail.com", "password": "Morales", "admin": 0},
         {"name": "Idris Elba", "email": "idriselba15@gmail.com", "password": "Morales", "admin": 0},
         {"name": "Tyler Perry", "email": "tylerperry@gmail.com", "password": "Morales", "admin": 1},
-        { "name": "cesar nina", "email": "cesar@apprentice_apparel.com", "password": "apprenticeapparel", "admin": 1},
-        { "name": "denille carrington", "email": "denille@apprentice_apparel.com", "password": "apprenticeapparel" , "admin": 1},
-        { "name": "serge nikiema", "email": "serge@apprentice_apparel.com", "password": "apprenticeapparel"  , "admin": 1}
+        { "name": "cesar nina", "email": "cesar@apprenticeapparel.com", "password": "apprenticeapparel", "admin": 1},
+        { "name": "denille carrington", "email": "denille@apprenticeapparel.com", "password": "apprenticeapparel" , "admin": 1},
+        { "name": "serge nikiema", "email": "serge@apprenticeapparel.com", "password": "apprenticeapparel"  , "admin": 1}
     ]
 }    

@@ -35,12 +35,17 @@ const  Signup = () =>  {
 
     const redirect = (response) => {
         if (response.newUser) {
-            console.log("new user",response)
+            console.log("New User",response)
             navigate('/')
-        } else{
-            console.log("exist user",response)
+        } 
+        if (!response.existUser.password) {
+            console.log("Incorrect passowrd",response)
             navigate('/aa/login')
-        }
+        } 
+        if (response.existUser.admin) {
+            console.log("You have admin rights.",response)
+            navigate('/aa/adminView')
+        }        
     }
     return (
         <Container className="contact-wrapper">
