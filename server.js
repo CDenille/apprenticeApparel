@@ -124,13 +124,12 @@ app.get('/aa/adminView', async(req,res) => {
     res.json({allItems})
 })
 
-app.put('/aa/adminView/:id', async(req,res) => {
+app.get('/aa/adminView/:id', async(req,res) => {
     let itemId = req.params.id
-    let item = await Item.findByPk(itemId)
-    let updatedItem = await item.update(req.body)
+    let updatedItem = await Item.findByPk(itemId)
+    // let updatedItem = await item.update(req.body)
     res.json(updatedItem)
 })
-
 
 // contacts route for the contacts and about information
 app.post('/aa/contactus', async(req,res) => {
@@ -177,6 +176,13 @@ app.get('/aa/users', async(req,res) => {
 // app.use('*', (req, res) => {
 //     res.redirect('/');
 // })
+
+// route to update an item
+app.put('/aa/updateSubmit', async(req,res) => {
+    let { updateForm } = await req.body
+    console.log(updateForm)
+    res.send("Here is your update", updateForm)
+})
 
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);
