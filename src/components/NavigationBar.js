@@ -7,7 +7,7 @@ import Logo from '../../Logo.png'
 const Navigation = () => {
     return (
         <nav>
-            <Link to="Home">
+            <Link to="/">
                <div className="logo"><img src = {Logo} /></div>
             </Link>
 
@@ -16,15 +16,15 @@ const Navigation = () => {
                   <li>Menu</li>
                 </Link>
 
-                <Link to="/Sale">
+                <Link to="/sale">
                   <li>Sale</li>
                 </Link>
 
-                <Link to="/Account">
+                <Link to="/cccount">
                   <li>Account</li>
                 </Link>
 
-                <Link to="/Cart">
+                <Link to="/cart">
                   <li className="cart-style"><FaCartPlus /></li>
                 </Link>
             </ul>

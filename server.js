@@ -46,6 +46,13 @@ app.get('/aa', async(req, res) => {
     res.json({categories})
 })
 
+//route to display one category
+// app.get('/aa/:id', async(req, res) => {
+//     id = req.params.id
+//     let oneCategory = await Category.findByPk(id)
+//     res.json({oneCategory})
+// })
+
 //route displays all women clothing
 app.get('/aa/womens', async(req,res) => {
     let womens = await Item.findAll({
@@ -54,6 +61,13 @@ app.get('/aa/womens', async(req,res) => {
         }
     })
     res.json({womens})
+})
+
+//route to display one items
+app.get('/aa/womens/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json({oneItem})
 })
 
 //route displays all mens clothing

@@ -8,6 +8,11 @@ import Home from './components/Home'
 import Sale from './components/Sale'
 import Womens from './components/Womens'
 import Admin from './components/Admin'
+import SideBar from './components/SideBar';
+import Men from './components/Men';
+import Jewelry from './components/Jewelry';
+import Electronics from './components/Electronics';
+import WomenSingleView from './components/WomenSingleView';
 
 
 
@@ -31,11 +36,12 @@ const Blue = () => {
 }
 
 const App = () => {
+   
     return (
         <div>
             <Navigation />
-            <div>
-                <div>
+            <div className ="app-ontainer">
+                {/* <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
@@ -43,19 +49,25 @@ const App = () => {
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
                     <p><Link to='/contactus'>Go to Contact!</Link></p>
+                </div> */}
+                <div className="side-bar-container">
+                  <SideBar />
                 </div>
-
-                <div>
+                
+                <div className="components-container">
                     <Routes>
-                        <Route path='/home' exact element={<Home />}/>
+                        <Route path='/' exact element={<Home />}/>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
-                        <Route path='/' element={<Contact />} />
+                        <Route path='/contactus' element={<Contact />} />
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
                         <Route path='/admin' element={<Admin />} />
-
+                        <Route path='/mens' element={<Men />} />
+                        <Route path='/jewelry' element={<Jewelry />} />
+                        <Route path='/electronics' element={<Electronics />} />
+                        <Route exact path='/womens/:id' element={<WomenSingleView />} />
                     </Routes>
                 </div>
             </div>
