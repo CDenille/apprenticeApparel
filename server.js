@@ -12,7 +12,7 @@ const {sequelize} = require('./server/model');
 const { Admin, Cart, Category, Item, User } = require("./server/model");
 const seed = require('./server/seed/seed.js');
 const {checkUser} = require('./src/middlewares/loginMiddleware')
-const {isAdmin} = require('./src/middlewares/adminMiddleware')
+// const {isAdmin} = require('./src/middlewares/adminMiddleware')
 
 // seed();
 
@@ -77,17 +77,12 @@ app.post('/aa/signup', async(req,res) => {
     let allUsers =  await User.findAll()
     let user= req.body
     let validUser = checkUser(user, allUsers)
-    if(!validUser ) {
+    if(!validUser.email ) {
         let newUser = await User.create(req.body)
-        res.send({"newUser": newUser})
+        validUser.User = newUser
+        res.send({"newUser": validUser})
     }else {
-        let existUser = await User.findAll({
-            where: {
-                email: user.email
-            }
-        })
-        console.log(existUser)
-        res.send({"existUser": existUser})
+        res.send({"existUser": validUser})
     } 
 })
 //route checks if user is valid then checks if user is an admin
@@ -97,28 +92,12 @@ app.post('/aa/signup', async(req,res) => {
 app.get('/aa/login', async(req,res) => {
     let allUsers =  await User.findAll()
     let user= req.body
-    let validUser = await checkUser(user, allUsers)
-
-
-    if(validUser) {
-        let validAdmin = await isAdmin(user)
-        if(validAdmin) {
-            console.log('You have admin permissions')
-            res.redirect('/aa/admin')
-        }else {
-         res.redirect('/aa')
-        } 
-    }
-   
-    else {
-    //     //res.redirect('/aa/signup')
-    //     app.post('/aa/newlogin', async(req,res) => {
-    //         let newUser = await User.create(req.body)
-    //         let allUsers =  await User.findAll()
-    //         console.log({allUsers})
-    //     }) 
-    //console.log('You do not have an account. Please sign up.')
-    }   
+    let validUser = checkUser(user, allUsers)
+    if(!validUser.email ) {
+        res.send({"newUser": validUser})
+    }else {
+        res.send({"existUser": validUser})
+    } 
 })
 
 // route for admin page
