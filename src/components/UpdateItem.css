@@ -3,3 +3,21 @@ h1{
     color: white;
     text-align: center;
 }
+.description{
+    color: white;
+}
+.container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 400px;
+}
+.updateButton{
+    background-color: black;
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
