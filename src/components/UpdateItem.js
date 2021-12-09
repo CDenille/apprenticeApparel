@@ -1,20 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { Button, Container, Row, Col, Form, FloatingLabel, Figure } from 'react-bootstrap';
 import axios from 'axios'
 import './UpdateItem.css'
 import{Link} from 'react-router-dom';
 
 function UpdateItem(props) {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetchCart();
+}, []);
+
+    const fetchCart = async () => {
+    const id = 2;
+    const { data } = await axios.get(`/aa/adminView/${id}`);
+    console.log(data)
+    setCart(data);
+}
+    console.log(item)
     return (
         <div >
-        <Link to={`/aa/adminView/${props.item.id}`}>
-            <h1>{props.item.title}</h1>
-        </Link>
+            <h1>Denille</h1>
+        // {/* <Link to={`/aa/adminView/${props.item.id}`}> 
+        //     <h1>{props.item.title}</h1>
+        //  </Link> */}
         </div>
 
     )
 
 }
+
 
 // class UpdateItem extends Component {
 //     constructor(props){

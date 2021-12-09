@@ -31,23 +31,24 @@ class Admin extends Component {
     }
     
     render() {
-        console.log("state here", this.state.allItems)
+        console.log("props output", this.props)
         return (
             <><div className="admin-header">Admin View</div>
             <div className="adminView-container">
 
                 {this.state.allItems.map(item => {
                     return <div key={item.id} className="image-container">
+                        <Link className="imageLink" to={`/aa/adminView/${item.id}`}>
                         <img src={item.image} className="image" />
-                        {/* <Link className="imageLink" to={`/aa/adminView/${item.id}`}>
-                        <p class="title">{item.title} </p>
-                        </Link> */}
+                        </Link>
+                        <p class="title">{item.title}</p>
                         <p class="description">{item.description}</p>
                         <p class="price">${item.price} </p>
                         <p class="sale"p>Sale: {item.sale} </p>
 
+
                         <Button className="button">Update</Button>
-                        <UpdateItem item={item}/>
+                        {/* <UpdateItem item={item}/> */}
 
                     </div>;
                 })}

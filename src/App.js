@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 import Navigation from './components/NavigationBar';
@@ -31,6 +31,11 @@ const Blue = () => {
 }
 
 const App = () => {
+    const [item, setItem] = useState( )
+    const items = (i) => {
+        console.log("our item", i)
+        setItem(i)
+    }
     return (
         <div>
             <Navigation />
@@ -54,8 +59,8 @@ const App = () => {
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
-                        <Route path='/admin' component={<Admin />} />
-                        <Route path='/update/:id' element={<UpdateItem />} />
+                        <Route path='/' element={<Admin itemsFunction={items}/>} />
+                        <Route path='/aa/adminView/:id' element={<UpdateItem item={item} />} />
 
                     </Routes>
                 </div>
