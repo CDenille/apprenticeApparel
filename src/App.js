@@ -11,7 +11,12 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import Womens from './components/Womens'
 import Admin from './components/Admin'
+import SideBar from './components/SideBar';
+import Men from './components/Men';
+import Jewelry from './components/Jewelry';
+import Electronics from './components/Electronics';
 import UpdateItem from './components/UpdateItem'
+
 
 
 import "./App.css";
@@ -29,7 +34,7 @@ const App = () => {
     return (
         <>
             <Navigation />
-            <div>
+            <div className ="app-ontainer">
                 <div>
                     <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
@@ -40,21 +45,29 @@ const App = () => {
                     {/* <p><Link to='/contactus'>Go to Contact!</Link></p> */}
                    
                 </div>
-
-                <div>
+                <div className="side-bar-container">
+                  <SideBar />
+                </div>
+                
+                <div className="components-container">
                     <Routes>
+
                         <Route path='/home' exact element={<Home />}/>
-                        {/* <Route path='/red' element={<Red />} /> */}
-                        {/* <Route path='/blue' element={<Blue />} /> */}
+                        <Route path='/' exact element={<Home />}/>
+                        <Route path='/red' element={<Red />} />
+                        <Route path='/blue' element={<Blue />} />
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/aa/login' element={<Login />} />
                         <Route path='/aa/signup' element={<Signup />} />
                         <Route path='/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
-                        <Route path='/' element={<Admin itemsFunction={items}/>} />
+                        <Route path='/admin' element={<Admin />} />
+                        <Route path='/mens' element={<Men />} />
+                        <Route path='/jewelry' element={<Jewelry />} />
+                        <Route path='/electronics' element={<Electronics />} />
                         <Route path='/aa/adminView/:id' element={<UpdateItem item={item} />} />
                         <Route path='aa/checkout/:id' element={<Cart />} />
-
+                        
                     </Routes>
                 </div>
             </div>
