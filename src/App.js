@@ -7,11 +7,14 @@ import Sale from './components/Sale';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+import Womens from './components/Womens';
+import Admin from './components/Admin';
 
 import "./App.css";
-import "./components/NavigationBar.css"
-import "./components/Home.css"
-import "./components/Footer.css"
+import "./components/Home.css";
+import "./components/NavigationBar.css";
+import "./components/Footer.css";
+import './components/SideBar.css';
 
 const App = () => {
     return (

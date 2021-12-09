@@ -1,0 +1,63 @@
+import React, { Component } from 'react';
+import { Button, Container, Row, Col, Form, FloatingLabel, Figure } from 'react-bootstrap';
+import axios from 'axios'
+import './Admin.css'
+
+class Admin extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            allItems: []
+        }
+
+    }
+    componentDidMount = () => {
+        axios.get("http://localhost:3000/aa/adminView")
+        .then(response => {
+            console.log("response", response)
+            let data = []
+            for(let i = 0; i<response.data.allItems.length; i++){
+                data.push(response.data.allItems[i])
+            }
+
+            console.log("data", data)
+            this.setState({allItems: data})
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
+    
+    render() {
+        console.log("state here", this.state.allItems)
+        return (
+            <><div className="admin-header">Admin View</div>
+            <div className="adminView-container">
+
+                {this.state.allItems.map(item => {
+                    return <div key={item.id} className="image-container">
+                        <img src={item.image} className="image" />
+                        <p class="title">{item.title} </p>
+                        <p class="description">{item.description}</p>
+                        <p class="price">${item.price} </p>
+                        <p class="sale"p>Sale: {item.sale} </p>
+                        <Button className="button">Update</Button>
+
+                    </div>;
+                })}
+                {/* {this.state.allItems.map(item => {
+        return <figure class = "item" >
+            <img scr = {item.image}/>
+        <figcaption class = "title">{item.title}</figcaption>
+        <figcaption class = "description">{item.description}</figcaption>
+        <figcaption class = "price">${item.price}</figcaption>
+        <figcaption class = "sale">${item.sale}</figcaption>
+        <Button className="button" >Update</Button>
+        </figure>
+    })} */}
+
+            </div></>
+        );
+    }
+}    
+export default Admin;
