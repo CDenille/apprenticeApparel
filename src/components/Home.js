@@ -3,6 +3,7 @@ import axios from 'axios'
 import SideBar from './SideBar';
 import {Link} from 'react-router-dom'
 
+import './Home.css';
 
 class Home extends Component {
     constructor(props){

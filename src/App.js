@@ -17,13 +17,7 @@ import Jewelry from './components/Jewelry';
 import Electronics from './components/Electronics';
 import UpdateItem from './components/UpdateItem'
 
-
-
 import "./App.css";
-import "./components/Home.css";
-import "./components/NavigationBar.css";
-import "./components/Footer.css";
-import './components/SideBar.css';
 
 const App = () => {
     return (
@@ -39,7 +33,7 @@ const App = () => {
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/aa/login' element={<Sale />} />
                         <Route path='/aa/signup' element={<Sale />} />
-                        <Route path='/contactus' element={<Contact />} />
+                        <Route path='/aa/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
                         <Route path='/admin' element={<Admin />} />
                         <Route path='/mens' element={<Men />} />

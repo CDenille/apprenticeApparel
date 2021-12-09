@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCartPlus } from "react-icons/fa";
-import Logo from '../../Logo.png'
+import Logo from '../../Logo.png';
 
+import './NavigationBar.css';
 
 const Navigation = () => {
     return (
