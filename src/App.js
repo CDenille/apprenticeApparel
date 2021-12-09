@@ -1,35 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 import Navigation from './components/NavigationBar';
+import Home from './components/Home';
+import Sale from './components/Sale';
 import Contact from './components/Contact';
+import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Home from './components/Home'
 import Sale from './components/Sale'
 import Signup from './components/Signup'
 import Login from './components/Login'
+import Womens from './components/Womens'
+import Admin from './components/Admin'
+import UpdateItem from './components/UpdateItem'
+
 
 import "./App.css";
-import "./Home.css"
-import "./Navigation.css"
-import "./Footer.css"
-
-
-const Red = () => {
-    return (
-        <h1>RED!</h1>
-    )
-}
-
-const Blue = () => {
-    return (
-        <h1>BLUE!</h1>
-    )
-}
+import "./components/Home.css";
+import "./components/NavigationBar.css";
+import "./components/Footer.css";
+import './components/SideBar.css';
 
 const App = () => {
+    const [item, setItem] = useState( )
+    const items = (i) => {
+        console.log("our item", i)
+        setItem(i)
+    }
     return (
-        <div>
+        <>
             <Navigation />
             <div>
                 <div>
@@ -40,26 +40,28 @@ const App = () => {
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
                     <p><Link to='/contactus'>Go to Contact!</Link></p>
-                    <p><Link to='/aa/sale'>Sale!</Link></p>
-                    <p><Link to='/aa/login'>Login!</Link></p>
-                    <p><Link to='/aa/signup'>Signup!</Link></p>
+                   
                 </div>
 
                 <div>
                     <Routes>
-                        <Route path='/' exact element={<Home />}/>
-                        <Route path='/red' exact element={<Red />} />
-                        <Route path='/blue' exact element={<Blue />} />
-                        {/* <Route path='/' element={<Contact />} /> */}
-                        <Route path='/aa/sale' exact element={<Sale />} />
-                        <Route path='/aa/signup' exact element={<Signup />} />
-                        <Route path='/aa/login' exact element={<Login />} />
+                        <Route path='/home' exact element={<Home />}/>
+                        <Route path='/red' element={<Red />} />
+                        <Route path='/blue' element={<Blue />} />
+                        <Route path='/aa/sale' element={<Sale />} />
+                        <Route path='/aa/login' element={<Sale />} />
+                        <Route path='/aa/signup' element={<Sale />} />
                         <Route path='/contactus' element={<Contact />} />
+                        <Route path='/womens' element={<Womens />} />
+                        <Route path='/' element={<Admin itemsFunction={items}/>} />
+                        <Route path='/aa/adminView/:id' element={<UpdateItem item={item} />} />
+                        <Route path='aa/checkout/:id' element={<Cart />} />
+
                     </Routes>
                 </div>
             </div>
             <Footer />
-        </div>
+        </>
     )
 }
 
