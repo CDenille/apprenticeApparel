@@ -138,10 +138,10 @@ app.get('/aa/adminView', async(req,res) => {
     res.json({allItems})
 })
 
-app.put('/aa/adminView/:id', async(req,res) => {
+app.get('/aa/adminView/:id', async(req,res) => {
     let itemId = req.params.id
-    let item = await Item.findByPk(itemId)
-    let updatedItem = await item.update(req.body)
+    let updatedItem = await Item.findByPk(itemId)
+    // let updatedItem = await item.update(req.body)
     res.json(updatedItem)
 })
 

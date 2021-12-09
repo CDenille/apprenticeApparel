@@ -8,7 +8,7 @@ import Home from './components/Home'
 import Sale from './components/Sale'
 import Womens from './components/Womens'
 import Admin from './components/Admin'
-
+import UpdateItem from './components/UpdateItem'
 
 
 import "./App.css";
@@ -43,6 +43,7 @@ const App = () => {
                     <p><Link to='/red'>Go to Red!</Link></p>
                     <p><Link to='/blue'>Go to Blue!</Link></p>
                     <p><Link to='/contactus'>Go to Contact!</Link></p>
+                   
                 </div>
 
                 <div>
@@ -50,11 +51,11 @@ const App = () => {
                         <Route path='/home' exact element={<Home />}/>
                         <Route path='/red' element={<Red />} />
                         <Route path='/blue' element={<Blue />} />
-                        <Route path='/' element={<Contact />} />
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
-                        <Route path='/admin' element={<Admin />} />
+                        <Route path='/admin' component={<Admin />} />
+                        <Route path='/update/:id' element={<UpdateItem />} />
 
                     </Routes>
                 </div>

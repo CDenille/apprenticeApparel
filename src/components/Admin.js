@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Button, Container, Row, Col, Form, FloatingLabel, Figure } from 'react-bootstrap';
+import { Button, Container, Row, Col, Form, FloatingLabel, Figure, } from 'react-bootstrap';
+import{Link, Redirect} from 'react-router-dom';
 import axios from 'axios'
 import './Admin.css'
+import UpdateItem from './UpdateItem';
 
 class Admin extends Component {
     constructor(props){
@@ -37,11 +39,15 @@ class Admin extends Component {
                 {this.state.allItems.map(item => {
                     return <div key={item.id} className="image-container">
                         <img src={item.image} className="image" />
+                        {/* <Link className="imageLink" to={`/aa/adminView/${item.id}`}>
                         <p class="title">{item.title} </p>
+                        </Link> */}
                         <p class="description">{item.description}</p>
                         <p class="price">${item.price} </p>
                         <p class="sale"p>Sale: {item.sale} </p>
+
                         <Button className="button">Update</Button>
+                        <UpdateItem item={item}/>
 
                     </div>;
                 })}
