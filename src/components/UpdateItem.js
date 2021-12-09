@@ -12,7 +12,6 @@ const submit = (event) => {
         price: price,
         onSale: onSale
     }
-    console.log('myForm: ', updateForm)
     axios.put('/aa/updateSubmit', {
         updateForm: form
     })
@@ -41,7 +40,7 @@ function UpdateItem(props) {
 
     
     return (
-        <div class = "container">
+        <div className = "itemcontainer">
             <img src={items.image} className ="singleItemImage"/>
             <p></p>
             <Form  onClick={submit}>

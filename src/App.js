@@ -7,8 +7,6 @@ import Sale from './components/Sale';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
-import Home from './components/Home'
-import Sale from './components/Sale'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Womens from './components/Womens'
@@ -37,16 +35,7 @@ const App = () => {
         <>
             <Navigation />
             <div className ="app-ontainer">
-                <div>
-                    <h1>Hi there!!!!</h1>
-                    <p>How are you??</p>
-                    <p>This is a test!!</p>
-                    <p>Denille is here</p>
-                    <p><Link to='/red'>Go to Red!</Link></p>
-                    <p><Link to='/blue'>Go to Blue!</Link></p>
-                    <p><Link to='/contactus'>Go to Contact!</Link></p>
-                   
-                </div>
+               
                 <div className="side-bar-container">
                   <SideBar />
                 </div>
@@ -54,12 +43,10 @@ const App = () => {
                 <div className="components-container">
                     <Routes>
                         <Route path='/' exact element={<Home />}/>
-                        <Route path='/red' element={<Red />} />
-                        <Route path='/blue' element={<Blue />} />
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/aa/login' element={<Sale />} />
                         <Route path='/aa/signup' element={<Sale />} />
-                        <Route path='/contactus' element={<Contact />} />
+                        <Route path='/aa/contactus' element={<Contact />} />
                         <Route path='/womens' element={<Womens />} />
                         <Route path='/admin' element={<Admin />} />
                         <Route path='/mens' element={<Men />} />
