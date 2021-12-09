@@ -32,6 +32,13 @@ app.get('/aa', async(req, res) => {
     res.json({categories})
 })
 
+//route to display one category
+// app.get('/aa/:id', async(req, res) => {
+//     id = req.params.id
+//     let oneCategory = await Category.findByPk(id)
+//     res.json({oneCategory})
+// })
+
 //route displays all women clothing
 app.get('/aa/womens', async(req,res) => {
     let womens = await Item.findAll({
@@ -41,6 +48,13 @@ app.get('/aa/womens', async(req,res) => {
     })
     res.json({womens})
 })
+
+//route to display one items
+// app.get('/aa/womens/:id', async(req, res) => {
+//     id = req.params.id
+//     let oneItem = await Item.findByPk(id)
+//     res.json({oneItem})
+// })
 
 //route displays all mens clothing
 app.get('/aa/mens', async(req,res) => {
@@ -76,14 +90,19 @@ app.get('/aa/electronics', async(req,res) => {
 app.post('/aa/signup', async(req,res) => {
     let allUsers =  await User.findAll()
     let user= req.body
-    let validUser = await checkUser(user, allUsers)
-    if(!validUser) {
+    let validUser = checkUser(user, allUsers)
+    if(!validUser ) {
         let newUser = await User.create(req.body)
-        res.send('New user created')
+        res.send({"newUser": newUser})
     }else {
-        console.log('You already have an account. Please login.')
-        res.redirect('/aa/login')
-    }
+        let existUser = await User.findAll({
+            where: {
+                email: user.email
+            }
+        })
+        console.log(existUser)
+        res.send({"existUser": existUser})
+    } 
 })
 //route checks if user is valid then checks if user is an admin
 // if user is an admin, redirect to admin page
@@ -124,13 +143,12 @@ app.get('/aa/adminView', async(req,res) => {
     res.json({allItems})
 })
 
-app.put('/aa/adminView/:id', async(req,res) => {
+app.get('/aa/adminView/:id', async(req,res) => {
     let itemId = req.params.id
-    let item = await Item.findByPk(itemId)
-    let updatedItem = await item.update(req.body)
+    let updatedItem = await Item.findByPk(itemId)
+    // let updatedItem = await item.update(req.body)
     res.json(updatedItem)
 })
-
 
 // contacts route for the contacts and about information
 app.post('/aa/contactus', async(req,res) => {
@@ -177,6 +195,13 @@ app.get('/aa/users', async(req,res) => {
 // app.use('*', (req, res) => {
 //     res.redirect('/');
 // })
+
+// route to update an item
+app.put('/aa/updateSubmit', async(req,res) => {
+    let { updateForm } = await req.body
+    console.log(updateForm)
+    res.send("Here is your update", updateForm)
+})
 
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);

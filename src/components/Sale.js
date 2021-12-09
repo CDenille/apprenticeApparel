@@ -5,21 +5,21 @@ class Home extends Component {
     constructor(props){
         super(props);
         this.state = {
-            categories: []
+            saleItems: []
         }
 
     }
 
     componentDidMount = () => {
-        axios.get("http://localhost:3000/sale")
+        axios.get("http://localhost:3000/aa/sale")
         .then(response => {
             console.log("response", response)
             let data = []
             console.log("data", data)
-            for(let i = 0; i<response.data.categories.length; i++){
-                data.push(response.data.categories[i])
+            for(let i = 0; i<response.data.saleItems.length; i++){
+                data.push(response.data.saleItems[i])
             }
-            this.setState({categories: data})
+            this.setState({saleItems: data})
         })
         .catch((error) => {
             console.log(error)
@@ -27,15 +27,15 @@ class Home extends Component {
     }
     
     render() {
-        console.log("state here", this.state.categories)
+        console.log("state here", this.state.saleItems)
         return (
            
-            <div className="categories-container">
+            <div className="saleItems-container">
                 
-                {this.state.categories.map(category => {
-                    return <div key = {category.id} className="image-p-container"> 
-                             <img src={category.image} />
-                             <p>{category.name}</p>
+                {this.state.saleItems.map(saleItem => {
+                    return <div key = {saleItem.id} className="image-p-container"> 
+                             <img src={saleItem.image} />
+                             <p>{saleItem.name}</p>
 
                           </div>
                 })}
@@ -47,21 +47,3 @@ class Home extends Component {
 
 export default Home;
 
-// import React from 'react'
-
-// function NewUser() {
-
-//     //use this function when you submit your form!
-//     function handleSubmit(event) {
-//         //google what this function does below: (hint: something about refreshing pages)
-//         event.preventDefault()
-//         try {
-//             const response = await fetch(`http://localhost:3000/users`,{
-//                 method: 'POST',
-//                 headers: {
-//                   'Content-Type': 'application.json'
-//                 },
-//                 body: JSON
-//             })
-//         }
-//     }

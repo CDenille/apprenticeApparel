@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import axios from 'axios'
 import './Womens.css'
+import { Link } from 'react-router-dom';
 
 class Womens extends Component {
     constructor(props){
@@ -39,11 +40,14 @@ class Womens extends Component {
                 
                 {this.state.womens.map(women => {
                     return <div key = {women.id} className="image-p-container"> 
+                        
+                            <Link to = {`/womens/${women.id}`}>
                              <img src={women.image} />
+                             </Link>
                              <p>{women.title}</p>
                              <p>{women.descripton}</p>
                              <p>${women.price} </p>
-                             <Button className="button" >Add to Cart</Button> 
+                             <Button className="button" >Add to Cart</Button>
                              
                           </div>
                 })}
