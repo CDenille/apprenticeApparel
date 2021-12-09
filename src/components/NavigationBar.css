@@ -1,6 +1,6 @@
 
 nav{
-    position: fixed;
+    position: sticky;
     overflow: auto;
     top:0;
     left: 0;
@@ -9,7 +9,7 @@ nav{
     background-color: #131e30;
     width: 100%;
     border-bottom: 3px solid #56585c;
-
+    z-index: 100;
     
 
 }
