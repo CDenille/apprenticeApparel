@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer>
-            <Link to="/aa/Contactus">
+            <Link to="/aa/contactus">
                 <p className="contact-footer">Contact</p>
             </Link>
 
