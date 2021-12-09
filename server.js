@@ -64,11 +64,11 @@ app.get('/aa/womens', async(req,res) => {
 })
 
 //route to display one items
-app.get('/aa/womens/:id', async(req, res) => {
-    id = req.params.id
-    let oneItem = await Item.findByPk(id)
-    res.json({oneItem})
-})
+// app.get('/aa/womens/:id', async(req, res) => {
+//     id = req.params.id
+//     let oneItem = await Item.findByPk(id)
+//     res.json({oneItem})
+// })
 
 //route displays all mens clothing
 app.get('/aa/mens', async(req,res) => {

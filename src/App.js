@@ -12,7 +12,7 @@ import SideBar from './components/SideBar';
 import Men from './components/Men';
 import Jewelry from './components/Jewelry';
 import Electronics from './components/Electronics';
-import WomenSingleView from './components/WomenSingleView';
+
 
 
 
@@ -67,7 +67,7 @@ const App = () => {
                         <Route path='/mens' element={<Men />} />
                         <Route path='/jewelry' element={<Jewelry />} />
                         <Route path='/electronics' element={<Electronics />} />
-                        <Route exact path='/womens/:id' element={<WomenSingleView />} />
+                        
                     </Routes>
                 </div>
             </div>
