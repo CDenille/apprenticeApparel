@@ -16,6 +16,10 @@ import Men from './components/Men';
 import Jewelry from './components/Jewelry';
 import Electronics from './components/Electronics';
 import UpdateItem from './components/UpdateItem'
+import WomenSingleView from './components/WomenSingleView';
+import MenSingleView from './components/MenSingleView';
+import JewelrySingleView from './components/JewelrySingleView';
+import ElectronicSingleView from './components/ElectronicSingleView';
 
 
 
@@ -24,6 +28,7 @@ import "./components/Home.css";
 import "./components/NavigationBar.css";
 import "./components/Footer.css";
 import './components/SideBar.css';
+import "./components/WomenSingleView.css"
 
 const App = () => {
     const [item, setItem] = useState( )
@@ -54,8 +59,8 @@ const App = () => {
 
                         <Route path='/home' exact element={<Home />}/>
                         <Route path='/' exact element={<Home />}/>
-                        <Route path='/red' element={<Red />} />
-                        <Route path='/blue' element={<Blue />} />
+                        {/* <Route path='/red' element={<Red />} /> */}
+                        {/* <Route path='/blue' element={<Blue />} /> */}
                         <Route path='/aa/sale' element={<Sale />} />
                         <Route path='/aa/login' element={<Login />} />
                         <Route path='/aa/signup' element={<Signup />} />
@@ -67,6 +72,10 @@ const App = () => {
                         <Route path='/electronics' element={<Electronics />} />
                         <Route path='/aa/adminView/:id' element={<UpdateItem item={item} />} />
                         <Route path='aa/checkout/:id' element={<Cart />} />
+                        <Route path='aa/womens/:id' element={<WomenSingleView />} />
+                        <Route path='aa/mens/:id' element={<MenSingleView />} />
+                        <Route path='aa/jewelry/:id' element={<JewelrySingleView />} />
+                        <Route path='aa/electronics/:id' element={<ElectronicSingleView />} />
                         
                     </Routes>
                 </div>
