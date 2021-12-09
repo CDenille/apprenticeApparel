@@ -41,7 +41,7 @@ class Womens extends Component {
                 {this.state.womens.map(women => {
                     return <div key = {women.id} className="image-p-container"> 
                         
-                            <Link to = {`/womens/${women.id}`}>
+                            <Link to = {`/aa/womens/${women.id}`}>
                              <img src={women.image} />
                              </Link>
                              <p>{women.title}</p>

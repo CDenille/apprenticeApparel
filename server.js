@@ -50,11 +50,11 @@ app.get('/aa/womens', async(req,res) => {
 })
 
 //route to display one items
-// app.get('/aa/womens/:id', async(req, res) => {
-//     id = req.params.id
-//     let oneItem = await Item.findByPk(id)
-//     res.json({oneItem})
-// })
+app.get('/aa/womens/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
+})
 
 //route displays all mens clothing
 app.get('/aa/mens', async(req,res) => {
@@ -66,6 +66,13 @@ app.get('/aa/mens', async(req,res) => {
     res.json({mens})
 })
 
+//route to display one items
+app.get('/aa/mens/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
+})
+
 //route displays all jewelry
 app.get('/aa/jewelry', async(req,res) => {
     let jewelry = await Item.findAll({
@@ -75,6 +82,13 @@ app.get('/aa/jewelry', async(req,res) => {
     })
     res.json({jewelry})
 })
+
+//route to display one items
+app.get('/aa/jewelry/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
+})
 //route displays all electronics
 app.get('/aa/electronics', async(req,res) => {
     let electronics = await Item.findAll({
@@ -83,6 +97,12 @@ app.get('/aa/electronics', async(req,res) => {
         }
     })
     res.json({electronics})
+})
+
+app.get('/aa/electronics/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
 })
 //route checks if the user the valid
 //if user exist, redirects to login page

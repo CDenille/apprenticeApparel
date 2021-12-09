@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import axios from 'axios'
+import{Link, Redirect} from 'react-router-dom';
 import './Womens.css'
 
 class Jewelry extends Component {
@@ -38,8 +39,10 @@ class Jewelry extends Component {
             
                 
                 {this.state.list.map(elem => {
-                    return <div key = {elem.id} className="image-p-container"> 
+                    return <div key = {elem.id} className="image-p-container">
+                            <Link className="imageLink" to={`/aa/jewelry/${elem.id}`}> 
                              <img src={elem.image} />
+                             </Link>
                              <p>{elem.title}</p>
                              <p>{elem.descripton}</p>
                              <p>${elem.price} </p>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import axios from 'axios'
+import{Link, Redirect} from 'react-router-dom';
 import './Womens.css'
 
 class Men extends Component {
@@ -38,8 +39,10 @@ class Men extends Component {
             
                 
                 {this.state.mens.map(men => {
-                    return <div key = {men.id} className="image-p-container"> 
+                    return <div key = {men.id} className="image-p-container">
+                             <Link className="imageLink" to={`/aa/mens/${men.id}`}> 
                              <img src={men.image} />
+                             </Link>
                              <p>{men.title}</p>
                              <p>{men.descripton}</p>
                              <p>${men.price} </p>
