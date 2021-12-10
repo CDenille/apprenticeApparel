@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Navigation from './components/NavigationBar';
 import Home from './components/Home';
@@ -21,53 +21,32 @@ import JewelrySingleView from './components/JewelrySingleView';
 import ElectronicSingleView from './components/ElectronicSingleView';
 import Sale from './components/Sale';
 
-
-
 import "./App.css";
-import "./components/Home.css";
-import "./components/NavigationBar.css";
-import "./components/Footer.css";
-import './components/SideBar.css';
-import "./components/WomenSingleView.css"
 
 const App = () => {
-    const [item, setItem] = useState( )
-    const items = (i) => {
-        console.log("our item", i)
-        setItem(i)
-    }
     return (
         <>
             <Navigation />
             <div className ="app-ontainer">
-                <div>
-                    {/* <h1>Hi there!!!!</h1>
-                    <p>How are you??</p>
-                    <p>This is a test!!</p>
-                    <p>Denille is here</p>
-               
-                </div>
                 <div className="side-bar-container">
                   <SideBar />
                 </div>
-                
                 <div className="components-container">
                     <Routes>
-
-                        <Route path='/' exact element={<Home />}/>
-                        <Route path='/home' exact element={<Home />}/>
-                        <Route path='/sale' exact element={<Sale />} />
-                        <Route path='/login' exact  element={<Login />} />
-                        <Route path='/signup' exact element={<Signup />} />
-                        <Route path='/contactus' element={<Contact />} />
-                        <Route path='/womens' element={<Womens />} />
-                        <Route path='/admin' element={<Admin />} />
-                        <Route path='/mens' element={<Men />} />
-                        <Route path='/jewelry' element={<Jewelry />} />
-                        <Route path='/electronics' element={<Electronics />} />
-                        <Route path='/adminView/:id' element={<UpdateItem item={item} />} />
-                        <Route path='/checkout/:id' element={<Cart />} />
-                        
+                        <Route path='/' element={<Home />}/>
+                        <Route path='/aa/womens' element={<Womens />} />
+                        <Route path='/aa/mens' element={<Men />} />
+                        <Route path='/aa/jewelry' element={<Jewelry />} />
+                        <Route path='/aa/electronics' element={<Electronics />} />
+                        <Route path='/aa/sale' element={<Sale />} />
+                        <Route path='/aa/contactus' element={<Contact />} />
+                        <Route path='/aa/:id/cart' element={<Cart />} />
+                        <Route path='/aa/cart' element={<Cart />} />
+                        <Route path='/aa/login' element={<Login />} />
+                        <Route path='/aa/signup' element={<Signup />} />
+                        <Route path='/aa/admin' element={<Admin />} />
+                        <Route path='/aa/adminView/:id' element={<UpdateItem />} />
+                        <Route path='/aa/checkout/:id' element={<Cart />} />
                     </Routes>
                 </div>
             </div>

@@ -14,16 +14,9 @@ class Sale extends Component {
 
     }
     componentDidMount = () => {
-        axios.get("http://localhost:3000/sale")
+        axios.get("http://localhost:3000/aa/items/sale")
         .then(response => {
-            console.log("response", response)
-            let data = []
-            for(let i = 0; i<response.data.sales.length; i++){
-                data.push(response.data.sales[i])
-            }
-
-            console.log("data", data)
-            this.setState({sales: data})
+            this.setState({sales: response.data.saleItems})
         })
         .catch((error) => {
             console.log(error)

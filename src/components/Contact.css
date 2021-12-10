@@ -12,6 +12,11 @@ div.card {
     margin-bottom: 15px;
 }
 
+.profile-pic {
+    width: 286px;
+    height: 286px;
+}
+
 .github, .contact-submit {
     background-color: black;
     width: 100%;

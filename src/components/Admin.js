@@ -14,16 +14,9 @@ class Admin extends Component {
 
     }
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/adminView")
+        axios.get("http://localhost:3000/aa/admin/adminView")
         .then(response => {
-            console.log("response", response)
-            let data = []
-            for(let i = 0; i<response.data.allItems.length; i++){
-                data.push(response.data.allItems[i])
-            }
-
-            console.log("data", data)
-            this.setState({allItems: data})
+            this.setState({allItems: response.data.allItems});
         })
         .catch((error) => {
             console.log(error)
