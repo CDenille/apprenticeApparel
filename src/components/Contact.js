@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Card, Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import axios from 'axios';
-import Logo from '../../Logo.png'
+
+import Logo from '../../public/Logo.png';
+import Denille from '../../public/Denille.jpg';
+import Cesar from '../../public/Cesar.jpg';
+
 import './Contact.css';
 
 const Contact = () => {
@@ -43,7 +47,7 @@ const Contact = () => {
                 <Row className="justify-content-md-center">
                 <Col md="auto">
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Logo} atl="Logo" />
+                        <Card.Img className='profile-pic' variant="top" src={Logo} atl="Logo" />
                         <Card.Body>
                             <Card.Title>Serge Nikiema</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
@@ -53,7 +57,7 @@ const Contact = () => {
                 </Col>
                 <Col md="auto">
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Logo} atl="Logo" />
+                        <Card.Img className='profile-pic' variant="top" src={Logo} atl="Logo" />
                         <Card.Body>
                             <Card.Title>Mamadou Diallo</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
@@ -63,7 +67,8 @@ const Contact = () => {
                 </Col>
                 <Col md="auto">
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Logo} atl="Logo" />
+                        <Card.Img className='profile-pic' variant="top" 
+                                src={Denille} atl="Image of the developer, Denille" />
                         <Card.Body>
                             <Card.Title>Denille Carrington</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>
@@ -73,7 +78,8 @@ const Contact = () => {
                 </Col>
                 <Col md="auto">
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Logo} atl="Logo" />
+                        <Card.Img className='profile-pic' variant="top" 
+                                src={Cesar} atl="Image of the developer, Cesar" />
                         <Card.Body>
                             <Card.Title>Cesar Nina</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>

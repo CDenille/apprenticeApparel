@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, Button, Container, Row, Col, Link, Form, FloatingLabel } from 'react-bootstrap';
 import axios from 'axios';
-import Logo from '../../Logo.png'
+import Logo from '../../public/Logo.png';
 
 const  Signup = () =>  {
 

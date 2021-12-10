@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import axios from 'axios'
-import{Link, Redirect} from 'react-router-dom';
-import './Womens.css'
+import{ Link } from 'react-router-dom';
+
+import './Womens.css';
 
 class Electronics extends Component {
     constructor(props){
@@ -13,7 +14,7 @@ class Electronics extends Component {
 
     }
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/electronics")
+        axios.get("http://localhost:3000/aa/items/electronics")
         .then(response => {
             console.log("response", response)
             let data = []
@@ -30,14 +31,10 @@ class Electronics extends Component {
     }
     
     render() {
-        console.log("state here", this.state.electronics)
         return (
-            
-           
             <div className="womensClothing-container">
                 <h1 className="womens-header">Electronics</h1>
-            
-                
+
                 {this.state.electronics.map(electronic => {
                     return <div key = {electronic.id} className="image-p-container">
                             <Link className="imageLink" to={`/aa/electronics/${electronic.id}`}> 
@@ -46,8 +43,7 @@ class Electronics extends Component {
                              <p>{electronic.title}</p>
                              <p>{electronic.descripton}</p>
                              <p>${electronic.price} </p>
-                             <Button className="button" >Add to Cart</Button> 
-                             
+                             <Button className="button" >Add to Cart</Button>  
                           </div>
                 })}
                 

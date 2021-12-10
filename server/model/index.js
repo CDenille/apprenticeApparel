@@ -5,24 +5,11 @@ const { Item } = require('./Item');
 const { User } = require('./User');
 const { db } = require('../db');
 
-
 User.belongsToMany(Item, { through: Cart })
 Item.belongsToMany(User, { through: Cart, })
 
 Category.hasMany(Item, {as: 'items', foreignKey: 'categoryId'})
 Item.belongsTo(Category, {foreignKey: 'categoryId'})
-
-// Cart.hasMany(Item, {as: 'items', foreignKey: 'cartId'})
-// Item.belongsTo(Cart, {foreignKey: 'cartId'})
-
-// Category.hasMany(Item, {as: 'items', foreignKey: 'categoryId'})
-// Item.belongsTo(Category, {foreignKey: 'categoryId'})
-
-// User.hasOne(Cart, {foreignKey: 'userId'})
-// Cart.belongsTo(User, {foreignKey: 'userId'})
-
-// User.hasMany(Item, {as: 'items', foreignKey: 'userId'})
-
 
 module.exports = {
     Admin,
