@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 //route displays homepage and store categories
-app.get('/aa', async(req, res) => {
+app.get('/', async(req, res) => {
     let categories = await Category.findAll()
     res.json({categories})
 })
@@ -40,7 +40,7 @@ app.get('/aa', async(req, res) => {
 // })
 
 //route displays all women clothing
-app.get('/aa/womens', async(req,res) => {
+app.get('/womens', async(req,res) => {
     let womens = await Item.findAll({
         where: {
             categoryId: 1
@@ -50,14 +50,14 @@ app.get('/aa/womens', async(req,res) => {
 })
 
 //route to display one items
-app.get('/aa/womens/:id', async(req, res) => {
+app.get('/womens/:id', async(req, res) => {
     id = req.params.id
     let oneItem = await Item.findByPk(id)
     res.json(oneItem)
 })
 
 //route displays all mens clothing
-app.get('/aa/mens', async(req,res) => {
+app.get('/mens', async(req,res) => {
     let mens = await Item.findAll({
         where: {
             categoryId: 2
@@ -67,14 +67,14 @@ app.get('/aa/mens', async(req,res) => {
 })
 
 //route to display one items
-app.get('/aa/mens/:id', async(req, res) => {
+app.get('/mens/:id', async(req, res) => {
     id = req.params.id
     let oneItem = await Item.findByPk(id)
     res.json(oneItem)
 })
 
 //route displays all jewelry
-app.get('/aa/jewelry', async(req,res) => {
+app.get('/jewelry', async(req,res) => {
     let jewelry = await Item.findAll({
         where: {
             categoryId: 3
@@ -84,13 +84,13 @@ app.get('/aa/jewelry', async(req,res) => {
 })
 
 //route to display one items
-app.get('/aa/jewelry/:id', async(req, res) => {
+app.get('/jewelry/:id', async(req, res) => {
     id = req.params.id
     let oneItem = await Item.findByPk(id)
     res.json(oneItem)
 })
 //route displays all electronics
-app.get('/aa/electronics', async(req,res) => {
+app.get('/electronics', async(req,res) => {
     let electronics = await Item.findAll({
         where: {
             categoryId: 4
@@ -99,7 +99,7 @@ app.get('/aa/electronics', async(req,res) => {
     res.json({electronics})
 })
 
-app.get('/aa/electronics/:id', async(req, res) => {
+app.get('/electronics/:id', async(req, res) => {
     id = req.params.id
     let oneItem = await Item.findByPk(id)
     res.json(oneItem)
@@ -137,12 +137,12 @@ app.get('/login', async(req,res) => {
 // route for admin page
 // The application should support an admin to add new items for sale, 
 // change descriptions or removed items from sale
-app.get('/aa/adminView', async(req,res) => {
+app.get('/adminView', async(req,res) => {
     let allItems= await Item.findAll()
     res.json({allItems})
 })
 
-app.get('/aa/adminView/:id', async(req,res) => {
+app.get('/adminView/:id', async(req,res) => {
     let itemId = req.params.id
     let updatedItem = await Item.findByPk(itemId)
     // let updatedItem = await item.update(req.body)
@@ -157,7 +157,7 @@ app.post('/contactus', async(req,res) => {
 })
 
 // checkout route to pay or delete items in the cart.
-app.get('/aa/checkout/:id', async(req,res) => {
+app.get('/checkout/:id', async(req,res) => {
     let id = req.params.id
     let cart = await Cart.findAll({
         where: {
@@ -186,7 +186,7 @@ app.get('/sale', async(req,res) => {
 })
 
 //route to display all users 
-app.get('/aa/users', async(req,res) => {
+app.get('/users', async(req,res) => {
     let users = await User.findAll()
     res.json({users})
 })
@@ -196,11 +196,10 @@ app.get('/aa/users', async(req,res) => {
 // })
 
 // route to update an item
-app.put('/aa/updateSubmit', async(req,res) => {
-    let id = items.id 
-    let itemToUpdate = Item.findByPk(id)
-    let updatedItem = itemToUpdate.update(req.body)
-    res.json({updatedItem})
+app.put('/updateSubmit', async(req,res) => {
+    let { updateForm } = await req.body
+    console.log(updateForm)
+    res.send("Here is your update", updateForm)
 })
 
 

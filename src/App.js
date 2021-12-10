@@ -45,10 +45,7 @@ const App = () => {
                     <p>How are you??</p>
                     <p>This is a test!!</p>
                     <p>Denille is here</p>
-                    <p><Link to='/aa/signup'>Signup!</Link></p>
-                    <p><Link to='/aa/login'>Login!</Link></p>
-                    <p><Link to='/contactus'>Go to Contact!</Link></p> */}
-                   
+               
                 </div>
                 <div className="side-bar-container">
                   <SideBar />
@@ -57,11 +54,8 @@ const App = () => {
                 <div className="components-container">
                     <Routes>
 
-                        
-                        <Route path='/home' exact element={<Home />}/>
                         <Route path='/' exact element={<Home />}/>
-                        {/* <Route path='/red' element={<Red />} /> */}
-                        {/* <Route path='/blue' element={<Blue />} /> */}
+                        <Route path='/home' exact element={<Home />}/>
                         <Route path='/sale' exact element={<Sale />} />
                         <Route path='/login' exact  element={<Login />} />
                         <Route path='/signup' exact element={<Signup />} />
@@ -71,12 +65,8 @@ const App = () => {
                         <Route path='/mens' element={<Men />} />
                         <Route path='/jewelry' element={<Jewelry />} />
                         <Route path='/electronics' element={<Electronics />} />
-                        <Route path='/aa/adminView/:id' element={<UpdateItem item={item} />} />
-                        <Route path='aa/checkout/:id' element={<Cart />} />
-                        <Route path='aa/womens/:id' element={<WomenSingleView />} />
-                        <Route path='aa/mens/:id' element={<MenSingleView />} />
-                        <Route path='aa/jewelry/:id' element={<JewelrySingleView />} />
-                        <Route path='aa/electronics/:id' element={<ElectronicSingleView />} />
+                        <Route path='/adminView/:id' element={<UpdateItem item={item} />} />
+                        <Route path='/checkout/:id' element={<Cart />} />
                         
                     </Routes>
                 </div>
