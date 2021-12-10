@@ -16,11 +16,11 @@ const Navigation = () => {
                   <li>Menu</li>
                 </Link>
 
-                <Link to="/aa/sale">
+                <Link to="/sale">
                   <li>Sale</li>
                 </Link>
 
-                <Link to="/aa/account">
+                <Link to="/login">
                   <li>Account</li>
                 </Link>
 

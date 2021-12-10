@@ -107,7 +107,7 @@ app.get('/aa/electronics/:id', async(req, res) => {
 //route checks if the user the valid
 //if user exist, redirects to login page
 // if user do not exist, creates a new user
-app.post('/aa/signup', async(req,res) => {
+app.post('/signup', async(req,res) => {
     let allUsers =  await User.findAll()
     let user= req.body
     let validUser = checkUser(user, allUsers)
@@ -123,7 +123,7 @@ app.post('/aa/signup', async(req,res) => {
 // if user is an admin, redirect to admin page
 //normal user is redirected to homepage
 //if no user found, redirect to signup page
-app.get('/aa/login', async(req,res) => {
+app.get('/login', async(req,res) => {
     let allUsers =  await User.findAll()
     let user= req.body
     let validUser = checkUser(user, allUsers)
@@ -150,7 +150,7 @@ app.get('/aa/adminView/:id', async(req,res) => {
 })
 
 // contacts route for the contacts and about information
-app.post('/aa/contactus', async(req,res) => {
+app.post('/contactus', async(req,res) => {
     let { contactForm } = await req.body
     console.log(contactForm)
     res.send("Here is your information", contactForm)
@@ -176,13 +176,13 @@ app.get('/aa/checkout/:id', async(req,res) => {
     res.json({items})
 })
 // sale route to display all the items that are on sale 
-app.get('/aa/sale', async(req,res) => {
-    let saleItems = await Item.findAll({
+app.get('/sale', async(req,res) => {
+    let sales = await Item.findAll({
         where: {
             sale: 1
         }
     })
-    res.json({saleItems})
+    res.json({sales})
 })
 
 //route to display all users 

@@ -17,7 +17,7 @@ const  Login = () =>  {
             email:      email,
             password:   password,
         }       
-        axios.get('/aa/login', form)
+        axios.get('/login', form)
         .then(response => {
             console.log("Status: ", response.status);
             console.log("Data: ", response.data);
@@ -30,14 +30,14 @@ const  Login = () =>  {
     const redirect = (response) => {
         if (response.newUser) {
             console.log("New User",response)
-            navigate('/aa/signup')
+            navigate('/signup')
         } 
         if (!response.existUser.password) {
             console.log("Incorrect Password",response)
-            navigate('/aa/login')
+            navigate('/login')
         } else if (response.existUser.admin) {
             console.log("You have admin rights",response)
-            navigate('/aa/admin')
+            navigate('/admin')
         }
             console.log("Valid Login",response)
             navigate('/')
