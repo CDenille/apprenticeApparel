@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
+import { Button, Container, Row, Col, Form, FloatingLabel, Figure, } from 'react-bootstrap';
+import{Link, Redirect} from 'react-router-dom';
 import axios from 'axios'
+import './Admin.css'
+import UpdateItem from './UpdateItem';
 
 class Sale extends Component {
     constructor(props){
         super(props);
         this.state = {
-            saleItems: []
+            sales: []
         }
 
     }
-
     componentDidMount = () => {
         axios.get("http://localhost:3000/aa/items/sale")
         .then(response => {
-            let data = []
-            for(let i = 0; i<response.data.saleItems.length; i++){
-                data.push(response.data.saleItems[i])
-            }
-            this.setState({saleItems: data})
+            this.setState({sales: response.data.saleItems})
         })
         .catch((error) => {
             console.log(error)
@@ -26,16 +25,24 @@ class Sale extends Component {
     
     render() {
         return (
-            <div className="saleItems-container">
-                {this.state.saleItems.map(saleItem => {
-                    return <div key = {saleItem.id} className="image-p-container"> 
-                             <img src={saleItem.image} />
-                             <p>{saleItem.name}</p>
-                           </div>
+            <><div className="admin-header">Items on Sale</div>
+            <div className="adminView-container">
+
+                {this.state.sales.map(item => {
+                    return <div key={item.id} className="image-container">
+                        <Link className="imageLink" to={`/aa/adminView/${item.id}`}>
+                        <img src={item.image} className="image" />
+                        </Link>
+                        <p class="title">{item.title}</p>
+                        <p class="description">{item.description}</p>
+                        <p class="price">${item.price} </p>
+                        <p class="sale"p>Sale: {item.sale} </p>
+                        <Button className="button" >Add to Cart</Button>
+
+                    </div>;
                 })}
-            </div>
+            </div></>
         );
     }
-}
-
+}    
 export default Sale;

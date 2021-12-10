@@ -46,7 +46,7 @@ router.delete('/:id/cart', async(req,res) => {
 router.post('/contactus', async(req,res) => {
     let { contactForm } = await req.body
     console.log(contactForm)
-    res.send("Here is your information", contactForm)
+    res.send(contactForm)
 });
 
 //route checks if the user the valid

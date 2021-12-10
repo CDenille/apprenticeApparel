@@ -13,7 +13,7 @@ const Navigation = () => {
             </Link>
 
             <ul className ="nav-ul">
-                <Link to="/admin">
+                <Link to="/aa/admin">
                   <li>Menu</li>
                 </Link>
 
@@ -21,7 +21,7 @@ const Navigation = () => {
                   <li>Sale</li>
                 </Link>
 
-                <Link to="/aa/account">
+                <Link to="/aa/login">
                   <li>Account</li>
                 </Link>
 

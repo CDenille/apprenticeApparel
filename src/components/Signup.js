@@ -23,7 +23,7 @@ const  Signup = () =>  {
             password:   password,
             admin:      admin,
         }       
-            axios.post('/aa/signup', form)
+            axios.post('/signup', form)
             .then(response => {
                 console.log("Status: ", response.status);
                 console.log("Data: ", response.data);
@@ -40,11 +40,11 @@ const  Signup = () =>  {
         } 
         if (!response.existUser.password) {
             console.log("Incorrect passowrd",response)
-            navigate('/aa/login')
+            navigate('/login')
         } 
         if (response.existUser.admin) {
             console.log("You have admin rights.",response)
-            navigate('/aa/adminView')
+            navigate('/admin')
         }        
     }
     return (
