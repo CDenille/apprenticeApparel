@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCartPlus } from "react-icons/fa";
-import Logo from '../../Logo.png';
+import Logo from '../../public/Logo.png';
 
 import './NavigationBar.css';
 
@@ -25,7 +25,7 @@ const Navigation = () => {
                   <li>Account</li>
                 </Link>
 
-                <Link to="/aa/checkout/2">
+                <Link to="aa/2/cart">
                   <li className="cart-style"><FaCartPlus /></li>
                 </Link>
             </ul>

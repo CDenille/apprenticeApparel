@@ -8,23 +8,23 @@ const SideBar = () => {
         <div className="sidebar-container">
 
             <ul className ="side-bar-ul">
-                <Link to="/mens">
+                <Link to="/aa/mens">
                   <li><a>Men's Clothing</a></li>
                 </Link>
 
-                <Link to="/womens">
+                <Link to="/aa/womens">
                   <li><a>Women's Clothing</a></li>
                 </Link>
 
-                <Link to="/jewelry">
+                <Link to="/aa/jewelry">
                   <li><a>Jewelry</a></li>
                 </Link>
 
-                <Link to="/electronics">
+                <Link to="/aa/electronics">
                   <li><a>Electronics</a></li>
                 </Link>
 
-                <Link to="/sale">
+                <Link to="/aa/sale">
                   <li><a>Sale</a></li>
                 </Link>
             </ul>

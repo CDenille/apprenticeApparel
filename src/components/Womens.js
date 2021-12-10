@@ -15,7 +15,7 @@ class Womens extends Component {
     }
 
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/womens")
+        axios.get("http://localhost:3000/aa/items/womens")
         .then(response => {
             let data = []
             for(let i = 0; i<response.data.womens.length; i++){

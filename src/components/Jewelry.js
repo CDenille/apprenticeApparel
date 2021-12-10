@@ -12,7 +12,7 @@ class Jewelry extends Component {
     }
 
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/jewelry")
+        axios.get("http://localhost:3000/aa/items/jewelry")
         .then(response => {
             let data = []
             for(let i = 0; i<response.data.jewelry.length; i++){

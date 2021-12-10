@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Card, Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
 import axios from 'axios';
-import Logo from '../../Logo.png'
+
+import Logo from '../../public/Logo.png';
+import Denille from '../../public/Denille.jpg';
+
 import './Contact.css';
 
 const Contact = () => {
@@ -63,7 +66,7 @@ const Contact = () => {
                 </Col>
                 <Col md="auto">
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Logo} atl="Logo" />
+                        <Card.Img variant="top" src={Denille} atl="Denille" />
                         <Card.Body>
                             <Card.Title>Denille Carrington</Card.Title>
                             <Card.Subtitle className="text-muted">Software Engineer</Card.Subtitle>

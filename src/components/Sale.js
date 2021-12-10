@@ -11,7 +11,7 @@ class Sale extends Component {
     }
 
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/sale")
+        axios.get("http://localhost:3000/aa/items/sale")
         .then(response => {
             let data = []
             for(let i = 0; i<response.data.saleItems.length; i++){
@@ -31,8 +31,7 @@ class Sale extends Component {
                     return <div key = {saleItem.id} className="image-p-container"> 
                              <img src={saleItem.image} />
                              <p>{saleItem.name}</p>
-
-                          </div>
+                           </div>
                 })}
             </div>
         );

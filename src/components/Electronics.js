@@ -13,7 +13,7 @@ class Electronics extends Component {
 
     }
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/electronics")
+        axios.get("http://localhost:3000/aa/items/electronics")
         .then(response => {
             console.log("response", response)
             let data = []
@@ -30,7 +30,6 @@ class Electronics extends Component {
     }
     
     render() {
-        console.log("state here", this.state.electronics)
         return (
             <div className="womensClothing-container">
                 <h1 className="womens-header">Electronics</h1>

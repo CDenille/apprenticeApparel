@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Navigation from './components/NavigationBar';
 import Home from './components/Home';
@@ -30,17 +30,18 @@ const App = () => {
                 <div className="components-container">
                     <Routes>
                         <Route path='/' element={<Home />}/>
+                        <Route path='/aa/womens' element={<Womens />} />
+                        <Route path='/aa/mens' element={<Men />} />
+                        <Route path='/aa/jewelry' element={<Jewelry />} />
+                        <Route path='/aa/electronics' element={<Electronics />} />
                         <Route path='/aa/sale' element={<Sale />} />
-                        <Route path='/aa/login' element={<Sale />} />
-                        <Route path='/aa/signup' element={<Sale />} />
                         <Route path='/aa/contactus' element={<Contact />} />
-                        <Route path='/womens' element={<Womens />} />
-                        <Route path='/admin' element={<Admin />} />
-                        <Route path='/mens' element={<Men />} />
-                        <Route path='/jewelry' element={<Jewelry />} />
-                        <Route path='/electronics' element={<Electronics />} />
+                        <Route path='/aa/:id/cart' element={<Cart />} />
+                        <Route path='/aa/cart' element={<Cart />} />
+                        <Route path='/aa/login' element={<Login />} />
+                        <Route path='/aa/signup' element={<Signup />} />
+                        <Route path='/aa/admin' element={<Admin />} />
                         <Route path='/aa/adminView/:id' element={<UpdateItem />} />
-                        <Route path='aa/checkout/:id' element={<Cart />} />
                     </Routes>
                 </div>
             </div>
