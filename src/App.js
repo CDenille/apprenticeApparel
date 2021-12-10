@@ -41,13 +41,13 @@ const App = () => {
             <Navigation />
             <div className ="app-ontainer">
                 <div>
-                    <h1>Hi there!!!!</h1>
+                    {/* <h1>Hi there!!!!</h1>
                     <p>How are you??</p>
                     <p>This is a test!!</p>
                     <p>Denille is here</p>
                     <p><Link to='/aa/signup'>Signup!</Link></p>
                     <p><Link to='/aa/login'>Login!</Link></p>
-                    {/* <p><Link to='/contactus'>Go to Contact!</Link></p> */}
+                    <p><Link to='/contactus'>Go to Contact!</Link></p> */}
                    
                 </div>
                 <div className="side-bar-container">

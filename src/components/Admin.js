@@ -46,10 +46,6 @@ class Admin extends Component {
                         <p class="price">${item.price} </p>
                         <p class="sale"p>Sale: {item.sale} </p>
 
-
-                        <Button className="button">Update</Button>
-                        {/* <UpdateItem item={item}/> */}
-
                     </div>;
                 })}
                 {/* {this.state.allItems.map(item => {

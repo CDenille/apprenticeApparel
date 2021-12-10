@@ -44,7 +44,7 @@ class Womens extends Component {
                             <Link to = {`/aa/womens/${women.id}`}>
                              <img src={women.image} />
                              </Link>
-                             <p>{women.title}</p>
+                             <p>{women.title} </p>
                              <p>{women.descripton}</p>
                              <p>${women.price} </p>
                              <Button className="button" >Add to Cart</Button>
