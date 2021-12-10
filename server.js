@@ -196,11 +196,11 @@ app.get('/aa/users', async(req,res) => {
 // })
 
 // route to update an item
-app.put('/aa/updateSubmit/:id', async(req,res) => {
-    let id = req.body.params.id
-    let itemToUpdate = await Item.findByPk(id)
-    let updatedItem = req.body
-    res.send("Your item has been updated", updatedItem)
+app.put('/aa/updateSubmit', async(req,res) => {
+    let id = items.id 
+    let itemToUpdate = Item.findByPk(id)
+    let updatedItem = itemToUpdate.update(req.body)
+    res.json({updatedItem})
 })
 
 

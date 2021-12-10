@@ -19,6 +19,7 @@ import WomenSingleView from './components/WomenSingleView';
 import MenSingleView from './components/MenSingleView';
 import JewelrySingleView from './components/JewelrySingleView';
 import ElectronicSingleView from './components/ElectronicSingleView';
+import Sale from './components/Sale';
 
 
 
