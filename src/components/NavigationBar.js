@@ -12,7 +12,7 @@ const Navigation = () => {
             </Link>
 
             <ul className ="nav-ul">
-                <Link to="/aa/menu">
+                <Link to="/admin">
                   <li>Menu</li>
                 </Link>
 

@@ -197,10 +197,12 @@ app.get('/aa/users', async(req,res) => {
 
 // route to update an item
 app.put('/aa/updateSubmit', async(req,res) => {
-    let { updateForm } = await req.body
-    console.log(updateForm)
-    res.send("Here is your update", updateForm)
+    let id = items.id 
+    let itemToUpdate = Item.findByPk(id)
+    let updatedItem = itemToUpdate.update(req.body)
+    res.json({updatedItem})
 })
+
 
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);
