@@ -1,7 +1,3 @@
-const { post } = require("request")
-
-const { put } = require("request")
-
 
 /aa/users
 /aa/users/:id 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Container, Row, Col, Form, FloatingLabel } from 'react-bootstrap';
-import axios from 'axios'
-import './Womens.css'
+import { Button } from 'react-bootstrap';
+import axios from 'axios';
+
+import './Womens.css';
 
 class Electronics extends Component {
     constructor(props){
@@ -31,20 +32,16 @@ class Electronics extends Component {
     render() {
         console.log("state here", this.state.electronics)
         return (
-            
-           
             <div className="womensClothing-container">
                 <h1 className="womens-header">Electronics</h1>
-            
-                
+
                 {this.state.electronics.map(electronic => {
                     return <div key = {electronic.id} className="image-p-container"> 
                              <img src={electronic.image} />
                              <p>{electronic.title}</p>
                              <p>{electronic.descripton}</p>
                              <p>${electronic.price} </p>
-                             <Button className="button" >Add to Cart</Button> 
-                             
+                             <Button className="button" >Add to Cart</Button>  
                           </div>
                 })}
                 

@@ -22,8 +22,6 @@ const Footer = () => {
                   <a><FaInstagram /></a>
                 </li>
             </ul>
-          
-            
         </footer>
     );
 };
