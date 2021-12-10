@@ -25,7 +25,7 @@ const Contact = () => {
             message: message
         }
         console.log('myForm: ', form)
-        axios.post('/aa/contactus', {
+        axios.post('/contactus', {
             contactForm: form
         })
     }
