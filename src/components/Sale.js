@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
+import { Button, Container, Row, Col, Form, FloatingLabel, Figure, } from 'react-bootstrap';
+import{Link, Redirect} from 'react-router-dom';
 import axios from 'axios'
+import './Admin.css'
+import UpdateItem from './UpdateItem';
 
-class Home extends Component {
+class Sale extends Component {
     constructor(props){
         super(props);
         this.state = {
-            saleItems: []
+            sales: []
         }
 
     }
-
     componentDidMount = () => {
-        axios.get("http://localhost:3000/aa/sale")
+        axios.get("http://localhost:3000/sale")
         .then(response => {
             console.log("response", response)
             let data = []
-            console.log("data", data)
-            for(let i = 0; i<response.data.saleItems.length; i++){
-                data.push(response.data.saleItems[i])
+            for(let i = 0; i<response.data.sales.length; i++){
+                data.push(response.data.sales[i])
             }
-            this.setState({saleItems: data})
+
+            console.log("data", data)
+            this.setState({sales: data})
         })
         .catch((error) => {
             console.log(error)
@@ -27,23 +31,25 @@ class Home extends Component {
     }
     
     render() {
-        console.log("state here", this.state.saleItems)
         return (
-           
-            <div className="saleItems-container">
-                
-                {this.state.saleItems.map(saleItem => {
-                    return <div key = {saleItem.id} className="image-p-container"> 
-                             <img src={saleItem.image} />
-                             <p>{saleItem.name}</p>
+            <><div className="admin-header">Items on Sale</div>
+            <div className="adminView-container">
 
-                          </div>
+                {this.state.sales.map(item => {
+                    return <div key={item.id} className="image-container">
+                        <Link className="imageLink" to={`/aa/adminView/${item.id}`}>
+                        <img src={item.image} className="image" />
+                        </Link>
+                        <p class="title">{item.title}</p>
+                        <p class="description">{item.description}</p>
+                        <p class="price">${item.price} </p>
+                        <p class="sale"p>Sale: {item.sale} </p>
+                        <Button className="button" >Add to Cart</Button>
+
+                    </div>;
                 })}
-                
-            </div>
+            </div></>
         );
     }
-}
-
-export default Home;
-
+}    
+export default Sale;

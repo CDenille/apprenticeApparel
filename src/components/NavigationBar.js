@@ -12,15 +12,15 @@ const Navigation = () => {
             </Link>
 
             <ul className ="nav-ul">
-                <Link to="/aa/menu">
+                <Link to="/admin">
                   <li>Menu</li>
                 </Link>
 
-                <Link to="/aa/sale">
+                <Link to="/sale">
                   <li>Sale</li>
                 </Link>
 
-                <Link to="/aa/account">
+                <Link to="/login">
                   <li>Account</li>
                 </Link>
 

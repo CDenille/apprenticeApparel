@@ -50,11 +50,11 @@ app.get('/womens', async(req,res) => {
 })
 
 //route to display one items
-// app.get('/aa/womens/:id', async(req, res) => {
-//     id = req.params.id
-//     let oneItem = await Item.findByPk(id)
-//     res.json({oneItem})
-// })
+app.get('/womens/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
+})
 
 //route displays all mens clothing
 app.get('/mens', async(req,res) => {
@@ -66,6 +66,13 @@ app.get('/mens', async(req,res) => {
     res.json({mens})
 })
 
+//route to display one items
+app.get('/mens/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
+})
+
 //route displays all jewelry
 app.get('/jewelry', async(req,res) => {
     let jewelry = await Item.findAll({
@@ -75,6 +82,13 @@ app.get('/jewelry', async(req,res) => {
     })
     res.json({jewelry})
 })
+
+//route to display one items
+app.get('/jewelry/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
+})
 //route displays all electronics
 app.get('/electronics', async(req,res) => {
     let electronics = await Item.findAll({
@@ -83,6 +97,12 @@ app.get('/electronics', async(req,res) => {
         }
     })
     res.json({electronics})
+})
+
+app.get('/electronics/:id', async(req, res) => {
+    id = req.params.id
+    let oneItem = await Item.findByPk(id)
+    res.json(oneItem)
 })
 //route checks if the user the valid
 //if user exist, redirects to login page
@@ -157,12 +177,12 @@ app.get('/checkout/:id', async(req,res) => {
 })
 // sale route to display all the items that are on sale 
 app.get('/sale', async(req,res) => {
-    let saleItems = await Item.findAll({
+    let sales = await Item.findAll({
         where: {
             sale: 1
         }
     })
-    res.json({saleItems})
+    res.json({sales})
 })
 
 //route to display all users 
@@ -181,6 +201,7 @@ app.put('/updateSubmit', async(req,res) => {
     console.log(updateForm)
     res.send("Here is your update", updateForm)
 })
+
 
 app.listen(PORT, function() {
     console.log(`Listening to port: ${PORT}`);

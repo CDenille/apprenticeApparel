@@ -6,18 +6,24 @@ h1{
 .description{
     color: white;
 }
-.container img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 400px;
-    width: 400px;
+.itemcontainer img{
+    width: 100%;
+}
+.itemcontainer {
+    padding-top: 100px;
+    padding-left: 400px;
+    width: 130%;
 }
 .updateButton{
     background-color: black;
-    width: 15%;
+    width: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 
 }
+
+
+
+
+

@@ -129,11 +129,6 @@
         },
         {"title": "LG - 50 in Class NanoCell 75 Series LED 4K UHD Smart webOS TV", 
             "description": "Elevate movies and sports with NanoCell. Color your world with a lifelike picture, enriched with a billion rich colors.", 
-            "categoryId": 3,
-            "sale": 1
-        },
-        {"title": "LG - 50 in Class NanoCell 75 Series LED 4K UHD Smart TV", 
-            "description": "Color your world with a lifelike picture, enriched with a billion rich colors.", 
             "price": 499.99, 
             "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6453/6453622_sd.jpg;maxHeight=640;maxWidth=550", 
             "categoryId": 4,
