@@ -45,7 +45,7 @@ const Contact = () => {
                     <Col><h3 className="contact-header">The Team</h3></Col>
                 </Row>
                 <Row className="justify-content-md-center">
-                <Col md="auto">
+                <Col>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img className='profile-pic' variant="top" src={Logo} atl="Logo" />
                         <Card.Body>
@@ -55,7 +55,7 @@ const Contact = () => {
                         <Button className="github" onClick={()=>github('sergethi')}>GitHub</Button>
                     </Card>
                 </Col>
-                <Col md="auto">
+                <Col>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img className='profile-pic' variant="top" src={Logo} atl="Logo" />
                         <Card.Body>
@@ -65,7 +65,7 @@ const Contact = () => {
                         <Button className="github" onClick={()=>github('saliouprogress')}>GitHub</Button>
                     </Card>
                 </Col>
-                <Col md="auto">
+                <Col>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img className='profile-pic' variant="top" 
                                 src={Denille} atl="Image of the developer, Denille" />
@@ -76,7 +76,7 @@ const Contact = () => {
                         <Button className="github" onClick={()=>github('CDenille')}>GitHub</Button>
                     </Card>
                 </Col>
-                <Col md="auto">
+                <Col>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img className='profile-pic' variant="top" 
                                 src={Cesar} atl="Image of the developer, Cesar" />
